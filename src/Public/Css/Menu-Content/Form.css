@@ -1,0 +1,465 @@
+.Form-Field {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 5px;
+}
+
+.Field-Label {
+    font-weight: 600;
+}
+
+.Handle-Description {
+    display: grid;
+    justify-content: start;
+}
+
+.Description-Field-Input,
+.Field-Input {
+    border: solid 1px lightgray;
+}
+
+.Grid-Field>.Field-Input {
+    width: 90% !important;
+}
+
+.Description-Field-Input:focus,
+.Field-Input:focus {
+    color: black !important;
+    background-color: var(--bs-form-control-bg) !important;
+    border-color: gray !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 0.25rem #e8e8e8 !important;
+}
+
+.Button-Field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Form-Save-Button {
+    color: black;
+    border: solid 1px black;
+    background-color: whitesmoke;
+}
+
+.Form-Save-Button:hover {
+    color: white;
+    background-color: black;
+}
+
+.DescriptionBlock {
+    margin-bottom: 20px;
+}
+
+.Description-Add {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.Description-Add-btn {
+    border: solid 1px #28a745;
+    color: white;
+    background-color: #28a745;
+    border-radius: 5px;
+}
+
+.Description-Points {
+    display: flex;
+    align-items: center;
+}
+
+.Delete-Description-Icon {
+    color: red;
+    cursor: pointer;
+}
+
+.Product-Image {
+    display: flex;
+    flex-direction: column;
+}
+
+.Image-Input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Field-Update-Photo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.Tag-Add-Input {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+}
+
+.Tag-Button {
+    padding: 0px 10px;
+    font-size: 14px;
+    border: solid 1px lightgray;
+    border-left: none;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    color: black;
+    background-color: white;
+}
+
+.Tag-Input:focus+.Tag-Button {
+    color: white;
+    background-color: black;
+}
+
+.Tag-Input {
+    border-right: none;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.Tag-List {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 75%;
+}
+
+.Tag-Name {
+    font-size: 12px;
+    padding: 2px;
+}
+
+.Tag-Name-Remove {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    margin: 2px 5px;
+    padding: 1px;
+    background-color: lightgray;
+    align-items: center;
+}
+
+.Remove-Tag {
+    font-size: 12px;
+    padding: 0px 5px;
+}
+
+.Form-Heading {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+/*Computer*/
+@media screen and (min-width: 1100px) {
+
+    .Form-Heading {
+        margin-top: 20px;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        padding-bottom: 8px;
+        text-transform: uppercase;
+    }
+
+    .Form-Grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .Field-Input {
+        width: 50%;
+        padding: 3px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .photo-image-input {
+        width: 100% !important;
+    }
+
+    .Form-Field {
+        margin-bottom: 30px;
+    }
+
+    .Field-Label {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .Button-Field {
+        margin: 15px;
+    }
+
+    .Form-Save-Button {
+        /* width: 15%; */
+        margin: 0px 6px;
+        padding: 3px 20px;
+        font-size: 14px;
+    }
+
+    .DescriptionBlock {
+        margin-left: 120px;
+    }
+
+    .Handle-Description {
+        grid-template-columns: 10fr 2fr;
+        width: 80%;
+    }
+
+    .Description-Add-btn {
+        padding: 0px 12px;
+        font-size: 14px;
+    }
+
+    .Description-Input {
+        width: 80%;
+    }
+
+    .Description-Field-Input {
+        padding: 3px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        margin-top: 12px;
+        width: 90%;
+        margin-right: 15px;
+    }
+
+    .Description-Icon {
+        margin-top: 12px;
+    }
+
+    .Delete-Description-Icon {
+        font-size: 13px;
+        color: red;
+        cursor: pointer;
+    }
+
+    .Update-Field-Photo-Size {
+        height: 250px;
+        width: 450px;
+        border: solid 1px black;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .FormHR {
+        margin: 15px 0px;
+        color: black;
+    }
+
+    .No-Item-Present {
+        font-size: 14px;
+    }
+}
+
+/*Tables*/
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+
+    .Form-Heading {
+        margin-top: 15px;
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        padding-bottom: 7px;
+        text-transform: uppercase;
+    }
+
+    .Form-Grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .Field-Input {
+        min-width: 60%;
+        padding: 4px 12px;
+        border-radius: 5px;
+        font-size: 13px;
+    }
+
+    .Form-Field {
+        margin-bottom: 25px;
+    }
+
+    .Field-Label {
+        margin-bottom: 4px;
+        font-size: 13px;
+    }
+
+    .Button-Field {
+        margin: 15px;
+    }
+
+    .Form-Save-Button {
+        padding: 4px 5px;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+
+    .DescriptionBlock {
+        margin-left: 50px;
+    }
+
+    .Description-Add-btn {
+        padding: 0px 11px;
+        font-size: 13px;
+    }
+
+    .Handle-Description {
+        grid-template-columns: 10fr 2fr;
+        width: 80%;
+    }
+
+    .Description-Input {
+        width: 80%;
+    }
+
+    .Description-Field-Input {
+        padding: 4px 12px;
+        border-radius: 5px;
+        font-size: 13px;
+        margin-top: 5px;
+        width: 90%;
+        margin-right: 8px;
+    }
+
+    .Description-Icon {
+        margin-top: 5px;
+    }
+
+    .Delete-Description-Icon {
+        font-size: 12px;
+        color: red;
+        cursor: pointer;
+    }
+
+    .Update-Field-Photo-Size {
+        height: 200px;
+        width: 55%;
+        border: solid 1px black;
+        padding: 8px;
+        margin-bottom: 18px;
+    }
+
+    .photo-image-input {
+        width: 100% !important;
+    }
+
+    .FormHR {
+        margin: 15px 0px;
+        color: black;
+    }
+
+    .No-Item-Present {
+        font-size: 13px;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+
+    .Form-Heading {
+        margin-top: 10px;
+        font-size: 14px;
+        letter-spacing: 0px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+    }
+
+    .Form-Grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .Field-Input {
+        min-width: 75%;
+        padding: 3px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    .Form-Field {
+        margin-bottom: 20px;
+    }
+
+    .Field-Label {
+        margin-bottom: 3px;
+        font-size: 12px;
+    }
+
+    .Button-Field {
+        margin: 15px;
+    }
+
+    .Form-Save-Button {
+        padding: 4px 5px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+
+    .DescriptionBlock {
+        margin-left: 40px;
+    }
+
+    .Handle-Description {
+        grid-template-columns: 12fr 2fr;
+        width: 100%;
+    }
+
+    .Description-Add-btn {
+        padding: 0px 9px;
+        font-size: 11px;
+    }
+
+    .Description-Input {
+        width: 85%;
+    }
+
+    .Description-Field-Input {
+        padding: 3px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        margin-top: 5px;
+        width: 90%;
+        margin-right: 5px;
+    }
+
+    .Description-Icon {
+        margin-top: 5px;
+    }
+
+    .Delete-Description-Icon {
+        font-size: 11px;
+    }
+
+    .Update-Field-Photo-Size {
+        height: 150px;
+        width: 80%;
+        border: solid 1px black;
+        padding: 8px;
+        margin-bottom: 16px;
+    }
+
+    .photo-image-input {
+        width: 100% !important;
+    }
+
+    .FormHR {
+        margin: 10px 0px;
+        color: black;
+    }
+
+    .No-Item-Present {
+        font-size: 12px;
+    }
+}

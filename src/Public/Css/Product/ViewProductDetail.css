@@ -1,0 +1,458 @@
+.Product-Name {
+    text-transform: capitalize;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.Product-Price {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.new-Price {
+    color: darkgreen;
+    font-weight: 800;
+}
+
+.old-Price {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.Discount {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.Producthr {
+    border-top: 1px solid #cbc5c5;
+}
+
+.fa-tags {
+    color: green;
+}
+
+.Product-Point {
+    font-weight: bolder;
+}
+
+.offer-txt {
+    color: gray;
+    padding: 0px 5px;
+}
+
+.description-list {
+    color: slategray;
+    text-transform: capitalize;
+}
+
+.availabilityTrue {
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.availabilityFalse {
+    background-color: #a72828;
+    color: #fff;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.list-key {
+    text-transform: capitalize;
+    display: inline-block;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.list-points {
+    list-style: none;
+}
+
+.Product-Cart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Buy-Now-btn {
+    background-color: darkorange;
+    color: white;
+    font-weight: bolder;
+    border-radius: 5px;
+    border: solid 1px darkorange;
+}
+
+.Add-to-Cart-btn {
+    background-color: #28a745;
+    color: white;
+    font-weight: bolder;
+    border-radius: 5px;
+    border: solid 1px #28a745;
+}
+
+.Product-Img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: solid 1px black;
+    position: relative;
+}
+
+.Product-Img-size {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*Computer*/
+@media screen and (min-width: 1100px) {
+    .Product-Details {
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+    }
+
+    .Product-Details {
+        margin-top: 25px;
+    }
+
+    .Product-Content {
+        margin-left: 30px;
+        padding: 10px 25px;
+    }
+
+    .Product-Name {
+        font-size: 30px;
+    }
+
+    .new-Price {
+        font-size: 27px;
+    }
+
+    .old-Price {
+        padding: 0px 10px;
+        font-size: 17px;
+    }
+
+    .Discount {
+        padding: 0px 12px;
+        font-size: 14px;
+    }
+
+    .Producthr {
+        margin: 10px 0px;
+    }
+
+    .fa-tags {
+        padding: 0px 10px;
+        font-size: 16px;
+    }
+
+    .Product-Point {
+        font-size: 15px;
+    }
+
+    .offer-txt {
+        font-size: 14px;
+    }
+
+    .Product-Offers,
+    .Product-Description {
+        padding-left: 15px;
+    }
+
+    .description-list {
+        font-size: 15px;
+    }
+
+    .availabilityTrue {
+        padding: 0 6px;
+        font-size: 13px;
+    }
+
+    .availabilityFalse {
+        padding: 0 6px;
+        font-size: 13px;
+    }
+
+    .list-points {
+        font-size: 15px;
+    }
+
+    .list-key {
+        min-width: 150px;
+        line-height: 25px;
+    }
+
+    .RelatedProduct-Heading {
+        padding: 5px;
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .related-product-name {
+        min-height: 58px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .Buy-Now-btn {
+        padding: 11px 80px;
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    .Add-to-Cart-btn {
+        padding: 11px 80px;
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    .Product-Img {
+        height: 80%;
+    }
+
+    .view-Product-Heart-Icon {
+        font-size: 30px;
+    }
+
+    .View-Like-Product {
+        transition: transform 0.3s;
+        position: absolute;
+        top: 20px;
+        right: 40px;
+    }
+
+    .View-Like-Product:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+}
+
+/*Tables*/
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    .Product-Details {
+        margin-top: 10px;
+    }
+
+    .Product-Content {
+        padding: 5px 10px;
+    }
+
+    .Product-Name {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .Product-Point {
+        font-size: 15px;
+    }
+
+    .new-Price {
+        font-size: 20px;
+    }
+
+    .old-Price {
+        padding: 0px 9px;
+        font-size: 14px;
+    }
+
+    .Discount {
+        padding: 0px 5px;
+        font-size: 13px;
+    }
+
+    .Producthr {
+        margin: 10px 0px;
+    }
+
+    .fa-tags {
+        padding: 0px 5px;
+        font-size: 14px;
+    }
+
+
+    .offer-txt {
+        font-size: 14px;
+    }
+
+    .Product-Offers,
+    .Product-Description {
+        padding-left: 5px;
+    }
+
+    .description-list {
+        font-size: 14px;
+    }
+
+    .availabilityTrue {
+        padding: 0 5px;
+        font-size: 12px;
+    }
+
+    .availabilityFalse {
+        padding: 0 5px;
+        font-size: 12px;
+    }
+
+    .list-points {
+        font-size: 14px;
+    }
+
+    .list-key {
+        min-width: 95px;
+    }
+
+    .RelatedProduct-Heading {
+        padding: 5px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .Buy-Now-btn {
+        padding: 5px 40px;
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .Add-to-Cart-btn {
+        padding: 5px 40px;
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .Product-Img {
+        height: 40%;
+    }
+
+    .Product-Img-size {
+        width: 90%;
+    }
+
+    .view-Product-Heart-Icon {
+        font-size: 25px;
+    }
+
+    .View-Like-Product {
+        position: absolute;
+        top: 12px;
+        right: 25px;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+
+    .Product-Details {
+        margin-top: 10px;
+    }
+
+    .Product-Content {
+        padding: 5px 10px;
+    }
+
+    .Product-Name {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .Product-Point {
+        font-size: 13px;
+    }
+
+    .new-Price {
+        font-size: 16px;
+    }
+
+    .old-Price {
+        padding: 0px 9px;
+        font-size: 13px;
+    }
+
+    .Discount {
+        padding: 0px 5px;
+        font-size: 12px;
+    }
+
+    .Producthr {
+        margin: 8px 0px;
+    }
+
+    .fa-tags {
+        padding: 0px 5px;
+        font-size: 13px;
+    }
+
+
+    .offer-txt {
+        font-size: 11px;
+    }
+
+    .Product-Offers,
+    .Product-Description {
+        padding-left: 5px;
+    }
+
+    .description-list {
+        font-size: 12px;
+    }
+
+    .availabilityTrue {
+        padding: 0 5px;
+        font-size: 10px;
+    }
+
+    .availabilityFalse {
+        padding: 0 5px;
+        font-size: 10px;
+    }
+
+    .list-points {
+        font-size: 12px;
+    }
+
+    .list-key {
+        min-width: 75px;
+    }
+
+    .RelatedProduct-Heading {
+        padding: 5px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .Buy-Now-btn {
+        padding: 5px 40px;
+        margin: 5px;
+        font-size: 12px;
+    }
+
+    .Add-to-Cart-btn {
+        padding: 5px 40px;
+        margin: 5px;
+        font-size: 12px;
+    }
+
+    .Product-Img {
+        height: 40%;
+    }
+
+    .Product-Img-size {
+        width: 90%;
+    }
+
+    .view-Product-Heart-Icon {
+        font-size: 17px;
+    }
+
+    .View-Like-Product {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+}

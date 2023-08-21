@@ -1,0 +1,248 @@
+.Six-Content {
+    width: 100%;
+}
+
+.Advertisement-Block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 7% 0px;
+    background-color: black;
+}
+
+.Second-Add-Section,
+.First-Add-Section {
+    padding: 4% 0px;
+}
+
+.Add-Watch-img {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Watch-Head {
+    position: absolute;
+}
+
+.Add-Img {
+    height: 100%;
+    width: 100%;
+}
+
+.Add-Watch-headline,
+.Add-headline {
+    color: white;
+}
+
+.Add-Sub-headline {
+    text-decoration: none;
+}
+
+.Add-Watch-headline {
+    color: white;
+    font-weight: 600;
+}
+
+.Sub-Watch-headline {
+    color: white;
+    display: inline;
+    border-bottom: solid 2px;
+}
+
+.Add-Watch-Sub-headline,
+.Sub-headline {
+    color: white;
+    display: inline;
+    padding-bottom: 3px;
+    border-bottom: solid 2px;
+}
+
+.Caro-SubHeading {
+    color: lightslategray;
+}
+
+.Caro-Heading {
+    color: black;
+    font-weight: 600;
+}
+
+.carousel-item {
+    background: none !important;
+}
+
+.Carousel-Caption {
+    position: absolute;
+}
+
+.Caro-Links {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-decoration: none;
+}
+
+.Caro-Links-Btn {
+    color: white;
+    border-radius: 15px;
+    background-color: black;
+}
+
+
+
+/*Computer*/
+@media screen and (min-width: 1100px) {
+    .Add-headline {
+        letter-spacing: 2px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    .Sub-headline {
+        font-size: 14px;
+    }
+
+    .Carousel-Caption {
+        top: 40%;
+        left: 9%;
+    }
+
+    .Caro-Heading {
+        font-size: 45px;
+    }
+
+    .Caro-SubHeading {
+        font-size: 16px;
+        margin: 20px 0px;
+    }
+
+    .Caro-Links-Btn {
+        font-size: 13px;
+        padding: 5px 15px;
+        margin: 10px 15px;
+    }
+
+    .Add-Img-Size {
+        width: 75%;
+    }
+
+    .Watch-Head {
+        right: 20%;
+    }
+
+    .Add-Watch-headline {
+        font-size: 30px;
+    }
+
+    .Sub-Watch-headline {
+        padding-bottom: 3px;
+        font-size: 15px;
+    }
+
+}
+
+/*Tables*/
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    .Add-headline {
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .Carousel-Caption {
+        top: 40%;
+        left: 5%;
+    }
+
+    .Add-Img-Size {
+        width: 110%;
+    }
+
+    .Sub-headline {
+        font-size: 13px;
+    }
+
+    .Caro-Heading {
+        font-size: 25px;
+    }
+
+    .Caro-SubHeading {
+        font-size: 17px;
+        margin: 10px 0px;
+    }
+
+    .Caro-Links-Btn {
+        font-size: 14px;
+        padding: 6px 10px;
+        margin: 10px;
+    }
+
+    .Watch-Head {
+        right: 20%;
+    }
+
+    .Add-Watch-headline {
+        font-size: 22px;
+    }
+
+    .Sub-Watch-headline {
+        padding-bottom: 2px;
+        font-size: 15px;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    .Add-headline {
+        letter-spacing: 0px;
+        margin-bottom: 0px;
+        font-size: 13px;
+    }
+
+    .Carousel-Caption {
+        top: 40%;
+        left: 2%;
+    }
+
+    .Add-Img-Size {
+        width: 100%;
+    }
+
+    .Sub-headline {
+        font-size: 10px;
+    }
+
+    .Caro-Heading {
+        font-size: 17px;
+    }
+
+    .Caro-SubHeading {
+        font-size: 12px;
+        margin: 10px 0px;
+    }
+
+    .Caro-Links-Btn {
+        font-size: 9px;
+        padding: 5px 8px;
+        margin: 5px;
+    }
+
+    .Watch-Head {
+        right: 15%;
+    }
+
+    .Add-Watch-headline {
+        font-size: 15px;
+    }
+
+    .Sub-Watch-headline {
+        padding-bottom: 1px;
+        font-size: 12px;
+    }
+}

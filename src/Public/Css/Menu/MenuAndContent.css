@@ -1,0 +1,119 @@
+.container {
+    margin-bottom: 20%;
+}
+
+.grid-container {
+    display: grid;
+    max-width: 100%;
+}
+
+.content-grid {
+    min-height: 100vh;
+}
+
+.Computer-Menu {
+    background-color: whitesmoke;
+}
+
+.Menu {
+    background-color: whitesmoke;
+    height: 100%;
+}
+
+.Mobile-Menu-btn {
+    position: absolute;
+}
+
+.Mobile-Menu-Icon {
+    font-size: 18px;
+}
+
+
+/*Computer*/
+@media screen and (min-width: 1100px) {
+    .Mobile-Menu-btn {
+        display: none;
+    }
+
+    .content-grid {
+        padding: 5px 30px;
+        margin: 10px 20px;
+        margin-bottom: 20%;
+    }
+
+    .Menu {
+        padding-left: 15px;
+        padding-top: 30px;
+        border-right: solid 1px;
+    }
+
+    .Mobile-Menu {
+        display: none;
+    }
+
+    .grid-container {
+        grid-template-columns: 17% 83%;
+    }
+}
+
+/*Tables*/
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    .Computer-Menu {
+        display: none;
+    }
+
+    .content-grid {
+        padding: 5px 20px;
+        margin: 8px 15px;
+        margin-bottom: 20%;
+    }
+
+    .grid-container {
+        grid-template-columns: 0% 100%;
+    }
+
+    .Menu {
+        padding-left: 7px;
+    }
+
+    .Mobile-Menu-btn {
+        top: 10px;
+        left: 25px;
+    }
+
+    .offcanvas {
+        width: 40% !important;
+        background-color: whitesmoke;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    .Computer-Menu {
+        display: none;
+    }
+
+    .content-grid {
+        padding: 5px;
+        margin: 5px;
+        margin-bottom: 20%;
+    }
+
+    .grid-container {
+        grid-template-columns: 0% 100%;
+    }
+
+    .Menu {
+        padding-left: 5px;
+    }
+
+    .Mobile-Menu-btn {
+        top: 8px;
+        left: 20px;
+    }
+
+    .offcanvas {
+        width: 60% !important;
+        background-color: whitesmoke;
+    }
+}

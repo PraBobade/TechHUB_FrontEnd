@@ -1,0 +1,322 @@
+.OrdersList {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Order-Image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Order-Details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+}
+
+
+.Orders-Info {
+    list-style: none;
+}
+
+.Order-Info-Label {
+    font-weight: 600;
+    display: inline-block;
+}
+
+.Order-Info-result {
+    text-transform: capitalize;
+}
+
+.Status_Dot {
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.CancelButton {
+    width: fit-content;
+    background-color: black;
+    color: white;
+    border: solid 1px #FF4500;
+    border-radius: 15px;
+}
+
+.OrderSelect {
+    border: solid 1px black;
+    border-radius: 7px;
+}
+
+.QuantityIcons {
+    border: none;
+    text-decoration-color: none;
+    background: none;
+    margin: 0px 10px;
+}
+
+.QuantityIcons:hover {
+    color: #FF4500;
+}
+
+.Filter-Orders {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 10px;
+}
+
+.SingleUserOrder {
+    display: grid;
+    border-radius: 10px;
+    border: solid 1px black;
+    justify-content: center;
+    align-items: start;
+}
+
+.SingleAdminOrder {
+    display: grid;
+    border-radius: 10px;
+    border: solid 1px black;
+}
+
+.Order-Products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.EachProduct {
+    border: solid 1px #eee;
+    margin: 5px 0px;
+    display: grid;
+    width: 100%;
+}
+
+.Order-Status {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.Handle-Order {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: start;
+}
+
+.CancelOrder {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Computer*/
+@media screen and (min-width: 1100px) {
+    .SingleUserOrder {
+        grid-template-columns: 4fr 4fr 3fr 2fr;
+        width: 95%;
+        grid-gap: 20px;
+        padding: 12px;
+        margin: 10px;
+    }
+
+    .Order-Image {
+        height: 80px;
+    }
+
+    .Order-Img-Size {
+        height: 90%;
+        border-radius: 20px;
+    }
+
+    .Order-Info-Label {
+        min-width: 85px;
+        margin-right: 8px;
+        font-size: 13px;
+    }
+
+    .Order-Info-result {
+        font-size: 13px;
+    }
+
+    .QuantityIcons {
+        font-size: 15px;
+    }
+
+    .Status_Dot {
+        height: 10px;
+        width: 10px;
+        margin-right: 10px;
+    }
+
+    .Order-status-msg {
+        margin-top: 5px;
+        font-size: 13px;
+        color: gray;
+    }
+
+    .CancelButton {
+        font-size: 13px;
+        padding: 1px 10px;
+    }
+
+    .OrderSelect {
+        font-size: 13px;
+        padding: 2px 10px;
+        margin: 0px 10px;
+    }
+
+    .SingleAdminOrder {
+        grid-template-columns: 3fr 4fr 2fr;
+        width: 95%;
+        grid-gap: 20px;
+        padding: 12px;
+        margin: 10px;
+    }
+
+    .EachProduct {
+        grid-gap: 15px;
+        grid-template-columns: 2fr 5fr;
+    }
+}
+
+/*Tables*/
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    .SingleUserOrder {
+        grid-template-rows: auto;
+        width: 100%;
+        grid-gap: 10px;
+        padding: 12px;
+        margin: 10px;
+    }
+
+    .Order-Image {
+        display: none;
+    }
+
+    .Order-Info-Label {
+        min-width: 45px;
+        margin-right: 4px;
+        font-size: 12px;
+    }
+
+    .Order-Info-result {
+        font-size: 12px;
+    }
+
+    .Status_Dot {
+        height: 6px;
+        width: 6px;
+        margin-right: 3px;
+    }
+
+    .Order-status-msg {
+        margin-top: 5px;
+        font-size: 12px;
+        color: gray;
+        display: contents;
+    }
+
+    .CancelButton {
+        font-size: 12px;
+        padding: 3px 9px;
+    }
+
+    .OrderSelect {
+        font-size: 12px;
+        padding: 2px 10px;
+        margin: 5px 8px;
+    }
+
+    .SingleAdminOrder {
+        grid-template-rows: auto;
+        width: 95%;
+        grid-gap: 10px;
+        padding: 12px;
+        margin: 10px;
+    }
+
+    .EachProduct {
+        width: 85%;
+        grid-gap: 15px;
+        margin-left: 20px;
+        padding-left: 10px;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    .SingleUserOrder {
+        grid-template-rows: auto;
+        width: 95%;
+        grid-gap: 10px;
+        padding: 12px;
+        margin: 10px;
+    }
+
+    .Order-Image {
+        display: none;
+    }
+
+    .Order-Info-Label {
+        min-width: 30px;
+        margin-right: 4px;
+        font-size: 11px;
+    }
+
+    .Order-Info-result {
+        font-size: 11px;
+    }
+
+    .Status_Dot {
+        height: 6px;
+        width: 6px;
+        margin-right: 3px;
+    }
+
+    .Order-status-msg {
+        margin-top: 5px;
+        font-size: 11px;
+        color: gray;
+        display: contents;
+    }
+
+    .CancelButton {
+        font-size: 11px;
+        padding: 1px 7px;
+    }
+
+    .OrderSelect {
+        font-size: 11px;
+        padding: 2px 8px;
+        margin: 0px 7px;
+    }
+
+    .SingleAdminOrder {
+        grid-template-rows: auto;
+        width: 95%;
+        grid-gap: 10px;
+        padding: 12px;
+        margin: 10px;
+    }
+
+    .EachProduct {
+        grid-gap: 15px;
+        margin-left: 20px;
+        padding-left: 10px;
+    }
+}

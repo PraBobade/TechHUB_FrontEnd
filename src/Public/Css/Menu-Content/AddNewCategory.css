@@ -1,0 +1,74 @@
+.New-Category {
+    margin-top: 10px;
+}
+
+.Category-Field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.AddCategory-Button {
+    color: black;
+    border: solid 1px black;
+    background-color: white;
+    padding: 3px 10px;
+}
+
+.AddCategory-Button:hover {
+    color: white;
+    background-color: black;
+}
+
+.SubmitBtn {
+    border-radius: 5px;
+    width: fit-content;
+    background-color: #28a745;
+    color: white;
+    border: solid 1px #28a745;
+}
+
+/*Computer*/
+@media screen and (min-width: 1100px) {
+    .AddCategory-Button {
+        font-size: 15px;
+        margin: 5px;
+        margin-bottom: 25px;
+    }
+
+    .SubmitBtn {
+        font-size: 15px;
+        padding: 5px 25px;
+        margin: 0px 15px;
+    }
+}
+
+/*Tables*/
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    .AddCategory-Button {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .SubmitBtn {
+        font-size: 13px;
+        padding: 4px 5px;
+        margin: 0px 10px;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    .AddCategory-Button {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .SubmitBtn {
+        font-size: 13px;
+        padding: 4px 5px;
+        margin: 0px 10px;
+    }
+}

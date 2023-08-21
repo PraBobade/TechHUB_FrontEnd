@@ -1,0 +1,171 @@
+.Footer {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.Footer-Content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+}
+
+.Content-Row-NewsSeller {
+    display: flex;
+    flex-direction: column;
+}
+
+.Row-List {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.Footer-Heading {
+    font-weight: 600;
+}
+
+.Row-List-Item {
+    text-decoration: none;
+    color: gray;
+}
+
+.Row-List-Item:hover {
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.Footer-SubHeading {
+    color: gray;
+}
+
+.NewsSeller-Input {
+    margin-right: 10px;
+}
+
+.FooterHR {
+    margin: 15px;
+    color: gray;
+    width: 85%;
+}
+
+/*Computer*/
+@media screen and (min-width: 1100px) {
+    .Footer {
+        padding-top: 15px;
+        padding-bottom: 50px;
+    }
+
+    .Footer-Content {
+        width: 85%;
+        margin-top: 30px;
+    }
+
+    .Content-Row {
+        flex: 1;
+        width: 15%;
+        margin-right: 10px;
+    }
+
+    .Content-Row-NewsSeller {
+        flex: 2;
+        width: 40%;
+        margin: 0px 20px;
+    }
+
+    .Footer-Heading {
+        font-size: 15px;
+        padding-bottom: 7px;
+    }
+
+    .Row-List-Item {
+        font-size: 13.5px;
+    }
+
+    .Footer-SubHeading {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+}
+
+/*Tables*/
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    .Footer {
+        padding-top: 20px;
+    }
+
+    .Footer-Content {
+        width: 90%;
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+
+    .Content-Row {
+        width: 20%;
+        margin-left: 5px;
+    }
+
+    .Content-Row-NewsSeller {
+        margin: 10px 20px;
+        width: 80%;
+    }
+
+    .Footer-Heading {
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+
+    .Row-List-Item {
+        font-size: 13px;
+    }
+
+    .Footer-SubHeading {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    .Footer {
+        padding-top: 20px;
+    }
+
+    .Footer-Content {
+        width: 95%;
+        margin-top: 15px;
+        padding-top: 10px;
+    }
+
+    .Content-Row {
+        /* flex: 1; */
+        width: 46%;
+        margin-left: 5px;
+    }
+
+    .Content-Row-NewsSeller {
+        /* flex: 2; */
+        margin: 0px 5px;
+        width: 100%;
+    }
+
+    .Footer-Heading {
+        font-size: 12px;
+        padding-bottom: 5px;
+    }
+
+    .Row-List-Item {
+        font-size: 11px;
+    }
+
+    .Footer-SubHeading {
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+}

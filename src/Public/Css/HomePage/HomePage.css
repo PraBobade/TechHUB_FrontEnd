@@ -1,0 +1,445 @@
+.Second-Content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.Category-Block {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0.4%;
+    border: solid 2px #eee;
+}
+
+.Category-Image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.Category-Heading {
+    text-align: center;
+    color: black;
+    text-transform: capitalize;
+}
+
+.Category-Title {
+    color: #767e84;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.Third-Content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Support-Block {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-right: solid 1px #dbd2d2;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+}
+
+.Support-Block:hover .Support-Logo-Size {
+    transform: scale(1.1);
+}
+
+
+.Support-Logo-Size {
+    color: black;
+    transition: transform 0.2s ease-in-out;
+}
+
+.Support-Title {
+    color: gray;
+}
+
+.Forth-Content {
+    margin-top: 50px;
+}
+
+.Fifth-Content-Heading,
+.Forth-Content-Heading {
+    font-weight: 600;
+    text-align: center;
+}
+
+.Blogs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blog1,
+.blog2 {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-img {
+    flex-basis: 40%;
+}
+
+.blog-body {
+    flex-basis: 60%;
+    overflow: hidden;
+}
+
+.blog-heading {
+    color: white;
+    font-weight: 600;
+}
+
+.blog-content {
+    color: gray;
+    padding: 0px 5px;
+    text-align: justify;
+}
+
+.HomePage-View-btn {
+    text-align: center;
+}
+
+.home-view-btn {
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.home-view-btn:hover {
+    background-color: black !important;
+    border: 1px solid black !important;
+    color: #fff !important;
+}
+
+/*Computer*/
+@media screen and (min-width: 1100px) {
+
+    .Containers {
+        margin: 0px 8px;
+    }
+
+    .Second-Content {
+        width: 100%;
+        margin: 20px 0px;
+        padding: 10px 0px;
+    }
+
+    .Category-Block {
+        width: 24%;
+        height: 350px;
+    }
+
+    .Category-Image {
+        height: 100%;
+        width: 80%;
+    }
+
+    .Home-CategoryImage-Size {
+        height: 80%;
+        width: 80%;
+        border-radius: 20px;
+    }
+
+    .Category-Heading {
+        padding-top: 20px;
+        font-size: 20px;
+    }
+
+    .Category-Title {
+        padding: 9px 10px;
+        font-size: 13px;
+        height: 55px;
+    }
+
+    .Third-Content {
+        margin: 25px 10px;
+        padding: 10px 5px;
+    }
+
+    .Support-Block {
+        margin: 0px 10px;
+        padding: 20px 5px;
+        width: 23%;
+    }
+
+    .Support-Logo-Size {
+        font-size: 25px;
+    }
+
+    .Support-Heading {
+        padding-top: 20px;
+        font-size: 18px;
+    }
+
+    .Support-Title {
+        padding: 10px 0px;
+        font-size: 12px;
+    }
+
+    .Fifth-Content-Heading,
+    .Forth-Content-Heading {
+        font-size: 30px;
+        padding-bottom: 5px;
+        letter-spacing: 0px;
+    }
+
+    .Fifth-Content {
+        margin: 25px 0px;
+        padding: 10px 0px;
+        width: 100%;
+    }
+
+    .blog1,
+    .blog2 {
+        padding: 20px;
+        margin: 1px;
+        width: 48%;
+    }
+
+    .blog-heading {
+        font-size: 17px;
+        padding: 15px 5px;
+    }
+
+    .blog-content {
+        font-size: 13px;
+    }
+
+    .blog-img-size {
+        height: 100%;
+        width: 90%;
+        padding: 10p 0px;
+    }
+
+    .home-view-btn {
+        padding: 3px 10px;
+    }
+}
+
+/*Tables*/
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+
+
+    .Containers {
+        margin: 0px 8px;
+    }
+
+    .Second-Content {
+        width: 100%;
+    }
+
+    .Category-Block {
+        height: 280px;
+        width: 45%;
+        margin: 10px;
+    }
+
+    .Category-Image {
+        height: 100%;
+        width: 80%;
+    }
+
+    .Home-CategoryImage-Size {
+        height: 80%;
+        width: 80%;
+        border-radius: 20px;
+    }
+
+    .Category-Heading {
+        font-size: 16px;
+        padding-top: 15px;
+    }
+
+    .Category-Title {
+        padding: 0px 5px;
+        font-size: 12px;
+    }
+
+    .Third-Content {
+        margin: 10px;
+    }
+
+    .Support-Block {
+        margin: 10px;
+        padding: 10px;
+        width: 40%;
+    }
+
+    .Support-Logo-Size {
+        font-size: 19px;
+    }
+
+    .Support-Heading {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .Support-Title {
+        padding: 5px 2px;
+        font-size: 13px;
+    }
+
+    .Fifth-Content-Heading,
+    .Forth-Content-Heading {
+        font-size: 20px;
+        padding-bottom: 0px;
+        letter-spacing: 1px;
+    }
+
+    .Fifth-Content {
+        margin: 10px;
+        padding: 10px 5px;
+        width: 100%;
+    }
+
+    .blog1,
+    .blog2 {
+        padding: 5px;
+        margin: 1px;
+        width: 100%;
+    }
+
+    .blog-heading {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .blog-content {
+        font-size: 12px;
+        min-height: 130px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .blog-img-size {
+        height: 100%;
+        width: 70%;
+        padding: 5px 0px;
+    }
+
+    .home-view-btn {
+        padding: 3px 10px;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    .Containers {
+        margin: 0px 8px;
+    }
+
+    .Second-Content {
+        width: 100%;
+    }
+
+    .Category-Block {
+        height: 200px;
+        width: 43%;
+        margin: 5px;
+    }
+
+    .Category-Image {
+        height: 100%;
+        width: 80%;
+    }
+
+    .Home-CategoryImage-Size {
+        height: 80%;
+        width: 80%;
+        border-radius: 20px;
+    }
+
+    .Category-Heading {
+        padding-top: 15px;
+        font-size: 14px;
+    }
+
+    .Category-Title {
+        padding: 0px 5px;
+        font-size: 10px;
+    }
+
+    .Third-Content {
+        margin: 0px;
+    }
+
+    .Support-Block {
+        margin: 10px;
+        padding: 10px;
+        width: 40%;
+    }
+
+    .Support-Logo-Size {
+        font-size: 15px;
+    }
+
+    .Support-Heading {
+        padding: 4px;
+        font-size: 11px;
+    }
+
+    .Support-Title {
+        padding: 5px 2px;
+        font-size: 11px;
+    }
+
+    .Fifth-Content-Heading,
+    .Forth-Content-Heading {
+        font-size: 17px;
+        padding-bottom: 5px;
+        letter-spacing: 0px;
+    }
+
+    .Fifth-Content {
+        margin: 10px;
+        padding: 10px 5px;
+        width: 100%;
+    }
+
+    .blog1,
+    .blog2 {
+        padding: 5px;
+        margin: 1px;
+        width: 100%;
+    }
+
+    .blog-heading {
+        font-size: 11px;
+        padding: 5px;
+    }
+
+    .blog-content {
+        font-size: 9px;
+        height: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .blog-img-size {
+        height: 100%;
+        width: 80%;
+        padding: 5px 0px;
+    }
+
+    .home-view-btn {
+        padding: 3px 10px;
+    }
+}

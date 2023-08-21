@@ -1,0 +1,91 @@
+.Success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.Success-Img-Size {
+    height: 90%;
+    width: 70%;
+
+}
+
+.Success-Heading {
+    color: green;
+}
+
+.Success-subHeading {
+    color: gray;
+}
+
+/*Computer*/
+@media screen and (min-width: 1100px) {
+    .Success {
+        margin: 30px 0px;
+    }
+
+    .Success-Img {
+        height: 70%;
+        width: 70%;
+        padding: 10px;
+        margin: 10px 0px;
+    }
+
+    .Success-Heading {
+        font-size: 18px;
+        margin: 10px 10px;
+    }
+
+    .Success-subHeading {
+        font-size: 15px;
+    }
+}
+
+/*Tables*/
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    .Success {
+        margin: 20px 0px;
+    }
+
+    .Success-Img {
+        height: 68%;
+        width: 68%;
+        padding: 10px;
+        margin: 10px 0px;
+    }
+
+    .Success-Heading {
+        font-size: 16px;
+        margin: 10px 10px;
+    }
+
+    .Success-subHeading {
+        font-size: 14px;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    .Success {
+        margin: 15px 0px;
+    }
+
+    .Success-Img {
+        height: 65%;
+        width: 65%;
+        padding: 10px;
+        margin: 10px 0px;
+    }
+
+    .Success-Heading {
+        font-size: 15px;
+        margin: 10px 10px;
+    }
+
+    .Success-subHeading {
+        font-size: 12px;
+    }
+}

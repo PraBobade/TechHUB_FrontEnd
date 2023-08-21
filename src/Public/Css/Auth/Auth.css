@@ -1,0 +1,219 @@
+/*--------------------------------------------------------------------------------------*/
+.AuthPage {
+    min-height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control:focus {
+    color: black !important;
+    background-color: var(--bs-form-control-bg) !important;
+    border-color: gray !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 0.25rem #e8e8e8 !important;
+
+}
+
+.AuthBox {
+    background-color: white;
+    box-shadow: 0 0 5px 2px lightgray;
+}
+
+.AuthSubmit {
+    text-align: center;
+}
+
+.Auth-input-field {
+    border: solid #b8b8b8 1px;
+    border-radius: 5px;
+}
+
+.Auth-input-field:hover {
+    border: solid #f5ecf4 1px;
+}
+
+.AuthSubmit-btn {
+    background: white;
+    border: solid 1px;
+    border-radius: 8px;
+}
+
+.AuthSubmit-btn:hover {
+    background: black;
+    color: white;
+}
+
+.show-password {
+    display: flex;
+    justify-content: end;
+    color: gray;
+}
+
+.forgot-password {
+    color: gray;
+    text-align: center;
+}
+
+.Success-Message {
+    color: green;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------------------------------*/
+/*Computer*/
+@media screen and (min-width: 1100px) {
+    .Auth-heading {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        letter-spacing: 3px;
+    }
+
+    .AuthBox {
+        margin: 55px 15px;
+        padding: 30px 15px;
+        width: 30%;
+    }
+
+    .Auth-input {
+        margin: 8px 4px;
+        height: 35px;
+    }
+
+    .Auth-input-field {
+        padding: 3px 15px;
+        border-radius: 5px;
+        font-size: 14.5px;
+    }
+
+    .show-password {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    .forgot-password {
+        font-size: 15px;
+        margin: 10px 25px;
+    }
+
+    .AuthSubmit {
+        margin: 10px 5px;
+        padding: 5px;
+    }
+
+    .AuthSubmit-btn {
+        padding: 3px 16px;
+        font-size: 14px;
+    }
+
+    .Success-Message {
+        font-size: 13px;
+        padding: 5px;
+    }
+}
+
+/*Tables*/
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    .Auth-heading {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        letter-spacing: 1px;
+    }
+
+    .AuthBox {
+        margin: 50px 10px;
+        padding: 25px 15px;
+        width: 50%;
+    }
+
+    .Auth-input {
+        margin: 8px 4px;
+        height: 30px;
+    }
+
+    .Auth-input-field {
+        padding: 4px 12px;
+        border-radius: 5px;
+        font-size: 13px;
+    }
+
+    .show-password {
+        font-size: 11px;
+    }
+
+    .forgot-password {
+        font-size: 13px;
+        margin: 10px 25px;
+    }
+
+    .AuthSubmit {
+        margin: 10px 5px;
+    }
+
+    .AuthSubmit-btn {
+        padding: 3px 16px;
+        font-size: 13px;
+    }
+
+    .Success-Message {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    .AuthBox {
+        margin: 30px 10px;
+        padding: 30px 15px;
+        width: 70%;
+    }
+
+    .Auth-input {
+        margin: 6px 4px;
+        height: 32px;
+    }
+
+    .Auth-input-field {
+        padding: 3px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    .show-password {
+        font-size: 10px;
+    }
+
+    .forgot-password {
+        font-size: 12px;
+        margin: 10px 25px;
+    }
+
+    .Auth-heading {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    .AuthSubmit {
+        margin: 10px 5px;
+        padding: 5px;
+    }
+
+    .AuthSubmit-btn {
+        padding: 3px 8px;
+        font-size: 12px;
+    }
+
+    .Success-Message {
+        font-size: 12px;
+        padding: 5px;
+    }
+}

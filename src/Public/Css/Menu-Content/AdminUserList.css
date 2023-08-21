@@ -1,0 +1,88 @@
+.UserTable {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.Edit-Category {
+    display: flex;
+    align-items: center;
+}
+
+/*Computer*/
+@media screen and (min-width: 1100px) {
+
+    .CategoryEditBtn,
+    .CategoryDeleteBtn,
+    .DeleteUser {
+        padding: 0px 10px;
+        margin: 0px 5px;
+        font-size: 14px;
+        border: solid 1px black;
+        background-color: white;
+    }
+
+    .CategoryDeleteBtn:hover,
+    .DeleteUser:hover {
+        color: white;
+        border: solid 1px red;
+        background-color: red;
+    }
+
+    .CategoryEditBtn:hover {
+        color: white;
+        border: solid 1px #ffc107;
+        background-color: #ffc107;
+    }
+
+    .table-Heading {
+        font-size: 14px !important;
+    }
+
+    .table-Fields {
+        font-size: 14px;
+    }
+}
+
+/*Tables*/
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+
+    .CategoryEditBtn,
+    .CategoryDeleteBtn,
+    .DeleteUser {
+        color: black;
+        border: solid 1px black;
+        padding: 0px 5px;
+        font-size: 12px;
+        margin: 0px 4px;
+    }
+
+    .table-Heading {
+        font-size: 13px !important;
+    }
+
+    .table-Fields {
+        font-size: 13px;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+
+    .CategoryEditBtn,
+    .CategoryDeleteBtn,
+    .DeleteUser {
+        color: black;
+        border: solid 1px black;
+        padding: 0px 5px;
+        font-size: 12px;
+        margin: 0px 3px;
+    }
+
+    .table-Heading {
+        font-size: 12px !important;
+    }
+
+    .table-Fields {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,173 @@
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    .ContactUs {
+        margin: 2%;
+        padding: 10px;
+    }
+
+    .Contact-Content {
+        flex-direction: column;
+        margin: 10px;
+        padding: 12px;
+    }
+
+    .Contact-Img {
+        flex: 1;
+        height: 100%;
+        width: 100%;
+    }
+
+    .ContactImg-Size {
+        height: 80%;
+        width: 100%;
+    }
+
+    .Contact-Info {
+        flex: 1;
+        margin: 10px;
+    }
+
+    .Contact-Heading {
+        font-size: 14px;
+        padding-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    .Contact-SubHeading {
+        font-size: 11px;
+        padding: 10px 5px;
+    }
+
+    .contact-item {
+        font-size: 11px;
+    }
+
+}
+
+/*Tables*/
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    .ContactUs {
+        margin: 8% 0%;
+        padding: 15px;
+    }
+
+    .Contact-Content {
+        flex-direction: row;
+        margin: 10px;
+        padding: 12px;
+    }
+
+    .Contact-Img {
+        flex: 1;
+        height: 100%;
+        width: 100%;
+    }
+
+    .ContactImg-Size {
+        height: 80%;
+        width: 100%;
+    }
+
+    .Contact-Info {
+        flex: 1;
+        margin: 10px;
+    }
+
+    .Contact-Heading {
+        font-size: 15px;
+        padding-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    .Contact-SubHeading {
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+
+    .contact-item {
+        font-size: 13px;
+    }
+
+}
+
+/*Computer*/
+@media screen and (min-width: 1100px) {
+    .ContactUs {
+        margin: 5% 4%;
+        padding: 20px;
+    }
+
+    .Contact-Content {
+
+        flex-direction: row;
+        margin: 10px;
+        padding: 25px;
+    }
+
+    .Contact-Img {
+        flex: 1;
+        height: 100%;
+        width: 100%;
+    }
+
+    .ContactImg-Size {
+        height: 80%;
+        width: 80%;
+    }
+
+    .Contact-Info {
+        flex: 1;
+        margin: 10px;
+    }
+
+    .Contact-Heading {
+        font-size: 18px;
+        padding-bottom: 8px;
+    }
+
+    .Contact-SubHeading {
+        font-size: 14px;
+        padding: 10px 5px;
+    }
+
+    .contact-item {
+        font-size: 15px;
+    }
+
+}
+
+.ContactUs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contact-Content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.Contact-Img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Contact-Heading {
+    text-align: center;
+    font-weight: 600;
+}
+
+.Contact-SubHeading {
+    text-align: center;
+    color: gray;
+}
+
+.contact-item {
+    margin-bottom: 5px;
+    text-align: start;
+    color: black;
+}

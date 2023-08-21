@@ -1,0 +1,102 @@
+.Panel-Group-CheckOut {
+    background-color: whitesmoke;
+}
+
+
+.Delivery-Option-Input {
+    padding: 0px 5px;
+    color: gray;
+}
+
+.Delivery-SameAdd-Details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+.Panel-Content-CheckOut {
+    background-color: white;
+}
+
+/*Computer*/
+@media screen and (min-width: 1100px) {
+    .Panel-Content-CheckOut {
+        padding: 20px;
+    }
+
+    .Delivery {
+        padding: 20px;
+    }
+
+    .Delivery-Option {
+        padding: 5px 25px;
+    }
+
+    .Delivery-Option-Input {
+        margin: 0px 20px;
+    }
+
+    .Delivery-Option-Label {
+        font-size: 14px;
+        color: gray;
+    }
+
+    .Delivery-SameAdd-Details {
+        font-size: 14px;
+    }
+}
+
+/*Tables*/
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    .Panel-Content-CheckOut {
+        padding: 20px;
+    }
+
+    .Delivery {
+        padding: 20px;
+    }
+
+    .Delivery-Option {
+        padding: 5px 25px;
+    }
+
+    .Delivery-Option-Input {
+        margin: 0px 20px;
+    }
+
+    .Delivery-Option-Label {
+        font-size: 14px;
+        color: gray;
+    }
+
+    .Delivery-SameAdd-Details {
+        font-size: 13px;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    .Delivery {
+        padding: 5px 0px
+    }
+
+    .Delivery-Option {
+        padding: 5px 15px;
+    }
+
+    .Delivery-Option-Input {
+        margin: 0px 5px;
+    }
+
+    .Delivery-Option-Label {
+        font-size: 11px;
+        color: gray;
+    }
+
+    .Delivery-SameAdd-Details {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,124 @@
+.MenuItem {
+    border-bottom: solid 1px #e1dbdb;
+    margin-bottom: 1px !important;
+}
+
+.List {
+    padding: 5px;
+}
+
+.List-Item {
+    list-style: none;
+}
+
+.List-Item-Label {
+    padding: 0px 10px
+}
+
+.Reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.Reset-Button {
+    border-radius: 10px;
+    border: solid 1px;
+}
+
+
+/*Computer*/
+@media screen and (min-width: 1100px) {
+    .Menu-Heading {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 5px;
+    }
+
+    .List-Item-Label:hover {
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .MenuItem {
+        padding: 10px;
+    }
+
+    .List-Item-Label {
+        font-size: 13px;
+    }
+
+    .Reset {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .Reset-Button {
+        font-size: 15px;
+        padding: 2px 10px;
+    }
+
+    .Reset-Button:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+/*Tables*/
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+
+    .Menu-Heading {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 2px;
+    }
+
+    .MenuItem {
+        padding-top: 8px;
+        padding-right: 10px;
+    }
+
+    .List-Item-Label {
+        font-size: 13px;
+    }
+
+    .Reset {
+        margin: 10px;
+        padding: 14px;
+    }
+
+    .Reset-Button {
+        font-size: 13px;
+        padding: 2px 8px;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+
+    .Menu-Heading {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 1px;
+    }
+
+    .MenuItem {
+        padding: 5px;
+    }
+
+    .List-Item-Label {
+        font-size: 11px;
+    }
+
+    .Reset {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .Reset-Button {
+        font-size: 12px;
+        padding: 2px 8px;
+    }
+}
