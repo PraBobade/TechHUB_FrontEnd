@@ -7,17 +7,17 @@ const AuthContext = createContext();
 
 export function AuthenticationState(props) {
     const LocalAuth = localStorage.getItem(`Auth`);
-    const [Auth, setAuth] = useState({ user: ``, token: ``, isAdmin: false });
+    const [Auth, setAuth] = useState({ user: ``, token: `` });
 
     /*${BASE_URL}*/
 
     async function GetAuthInfo() {
         if (LocalAuth) {
             const ParsedData = JSON.parse(LocalAuth);
-            setAuth({ user: ParsedData?.user, token: ParsedData?.token, isAdmin: (ParsedData?.user.role === 'Admin') });
+            setAuth({ user: ParsedData?.user, token: ParsedData?.token });
             return ParsedData?.token
         } else {
-            setAuth({ user: ``, token: ``, isAdmin: 'false' });
+            setAuth({ user: ``, token: `` });
             return ''
         }
     }

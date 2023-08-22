@@ -3,7 +3,7 @@ import moment from 'moment'
 import BrainTreeContext from '../../../../Context/BrainTreeContext';
 import ProductContext from '../../../../Context/Product';
 import '../../../../Public/Css/Product/Order.css'
-
+const BASE_URL = process.env.REACT_APP_BASE_URL
 
 export default function Sub_Orders() {
     const { UserOrders, CancelOrder } = useContext(BrainTreeContext);
@@ -55,7 +55,7 @@ export default function Sub_Orders() {
                                     return (
                                         <div key={pro._id} className="EachProduct">
                                             <div className="Order-Image">
-                                                <img className="Order-Img-Size" src={`http://localhost:5002/api/v1/product/product-photo/${pro?.product._id}`} />
+                                                <img className="Order-Img-Size" src={`${BASE_URL}/api/v1/product/product-photo/${pro?.product._id}`} />
                                             </div>
                                             <div className="Order-Details">
                                                 <li className="Orders-Info">
