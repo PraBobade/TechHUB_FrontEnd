@@ -11,7 +11,7 @@ const BASE_URL = process.env.REACT_APP_BASE_URL
 
 
 export default function AdminProductList() {
-
+    const [loading, setloading] = useState(false);
     const { DeleteProduct, ConvertToINR, AllCategories, FilterProducts, FilteredResult } = useContext(ProductContext);
     const { Auth } = useContext(AuthContext);
     const { View } = useContext(ViewContext);
@@ -19,7 +19,9 @@ export default function AdminProductList() {
     const [FilterFields, setFilterFields] = useState({ category: '', name: '', model: '', availability: '' });
 
     async function handleSearch() {
+        setloading(true);
         await FilterProducts(FilterFields);
+        setloading(false);
     }
 
     useEffect(() => {
@@ -94,10 +96,15 @@ export default function AdminProductList() {
 
                             </div>
                             <div className="Button-Field">
-                                <button onClick={handleSearch} className='Form-Save-Button'>Search</button>
+                                <button onClick={handleSearch} className='Form-Save-Button'>
+                                    {loading ?
+                                        <i className="fa-solid fa-spinner fa-spin-pulse" />
+                                        : <>Search</>
+                                    }
+                                </button>
                             </div>
                         </div>
-                        <div className="No-Item-Present" style={{ margin: "5px 0px", }}>
+                        <div className="No-Item-Present product-name" style={{ margin: "5px 0px", }}>
                             {FilteredResult.length === 0 ? 'No Result Found' : `${FilteredResult.length} Result Found`}
                         </div>
                         <div className="Product-List">

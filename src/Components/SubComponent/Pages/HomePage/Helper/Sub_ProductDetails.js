@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import '../../../../../Public/Css/Product/ViewProductDetail.css'
+import AuthContext from '../../../../../Context/AuthContext';
+
 const BASE_URL = process.env.REACT_APP_BASE_URL
+
 export default function ({ product, ConvertToINR, AddToCart, AddLikeProduct, LikeProducts, DislikeProduct }) {
     const navigate = useNavigate();
+    const { Auth } = useContext(AuthContext);
 
     async function BuyNow() {
         AddToCart(product);
-        navigate('/user/checkout');
+        navigate(`/user/${Auth?.user?.UserID}/checkout`);
     }
 
     return (

@@ -24,6 +24,7 @@ export default function ComNavBar() {
     const AdminToLink = ['dashboard', 'manage-orders']
 
     const [SearchKeyword, setSearchKeyword] = useState('');
+
     async function handleSearch(event) {
         event.preventDefault();
         const Result = await SearchProduct(SearchKeyword);

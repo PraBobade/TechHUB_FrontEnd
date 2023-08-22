@@ -1,17 +1,22 @@
 import React from 'react'
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Footer from './Footer.js';
 import Header from './Header.js';
+import logo from '../../Public/Images/TH.png'
 
 export default function Layout({ children, title, description, keywords, author }) {
   return (
     <>
       <HelmetProvider>
-        <meta charSet="UTF-8" />
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="author" content={author} />
-        <title>{title}</title>
+        <Helmet>
+
+          <meta charSet="UTF-8" />
+          <meta name="description" content={description} />
+          <meta name="keywords" content={keywords} />
+          <meta name="author" content={author} />
+          <title>{title}</title>
+          <link rel="icon" type="image/png" href={logo} />
+        </Helmet>
       </HelmetProvider>
       <Header />
 

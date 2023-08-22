@@ -6,9 +6,9 @@ import '../../../../Public/Css/HomePage/HomePage.css'
 import BlogImg1 from '../../../../Public/Images/Blog-1.jpg'
 import BlogImg2 from '../../../../Public/Images/Blog-2.jpg'
 import Laptop from '../../../../Public/Images/Home-Laptop.jpg'
-import Watch from '../../../../Public/Images/Home-Watch.jpg'
-import Mobile from '../../../../Public/Images/Home-Mobile.jpg'
-import Headphone from '../../../../Public/Images/Home-Headphone.jpg'
+import Watch from '../../../../Public/Images/Home-Watch.avif'
+import Mobile from '../../../../Public/Images/Home-Mobile.png'
+import Headphone from '../../../../Public/Images/Home-Headphone.avif'
 
 import Caro1 from '../../../../Public/Images/Caro1.webp'
 import Caro2 from '../../../../Public/Images/Caro2.webp'
@@ -91,7 +91,11 @@ export default function UsersHomePage() {
                 </div>
 
                 <div className="container">
+                    <div style={{ marginTop: "20px" }} className="Forth-Content-Heading">Select Category</div>
                     <div className="Second-Content">
+                        {AllCategories.length === 0 &&
+                            <i className="fa-solid fa-spinner fa-spin-pulse" />
+                        }
                         {AllCategories?.slice(0, 4).map((item, index) => {
                             return (
                                 <Link className="Category-Block" onClick={() => { SetCategoryWiseProduct(item?._id) }} key={item?._id} to={`/category/${item?._id}`} style={{ backgroundColor: 'rgb(245 245 245)' }}>
@@ -140,9 +144,12 @@ export default function UsersHomePage() {
                     </div>
 
                     <div className="Forth-Content appfont">
-                        <h2 className="Forth-Content-Heading">New Products</h2>
+                        <div className="appfont Forth-Content-Heading">New Products</div>
                         <div className="Content-Products">
                             <div className="Product-List">
+                                {AllProducts.length === 0 &&
+                                    <i className="fa-solid fa-spinner fa-spin-pulse" />
+                                }
                                 {AllProducts?.slice(-4).reverse().map((product, index) => {
                                     return (
                                         <div key={index} className="Each-Product card">

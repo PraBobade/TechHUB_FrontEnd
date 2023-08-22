@@ -31,7 +31,14 @@ export default function HomePage() {
                 }
                 <div className="content-grid">
                     <div className="No-Item-Present" style={{ margin: "5px 0px", }}>
-                        {FilteredResult.length === 0 && 'No Result Found'}
+                        {FilteredResult.length === 0 &&
+                            <>
+                                <div className="Menu-Heading">
+                                    No Result Found
+                                </div>
+                                <i style={{ margin: "10px" }} className="fa-solid fa-spinner fa-spin-pulse" />
+                            </>
+                        }
                     </div>
                     <UsersProductList Products={FilteredResult} />
                 </div>

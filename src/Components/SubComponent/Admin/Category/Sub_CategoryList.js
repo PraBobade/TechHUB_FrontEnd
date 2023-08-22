@@ -44,7 +44,9 @@ export default function CategoryList() {
                                     <button className="CategoryEditBtn" onClick={() => {
                                         setEditDetails({ ...editDetails, id: cate?._id, UpdatedName: cate?.name, ShowInput: true });
                                     }}> Edit </button>
-                                    <button className="CategoryDeleteBtn" onClick={() => { DeleteCategory(cate?._id) }}> Delete </button>
+                                    <button className="CategoryDeleteBtn" onClick={() => {
+                                        // DeleteCategory(cate?._id)
+                                    }}> Delete </button>
                                 </td>
                             </tr>
 

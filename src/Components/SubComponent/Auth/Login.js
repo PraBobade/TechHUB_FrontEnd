@@ -17,12 +17,18 @@ export default function Login() {
     const navigate = useNavigate();
 
     async function handleSubmit(event) {
-        event.preventDefault();
-        const Result = await Login(loginDetail);
-        if (Result) {
-            const UrlPath = location.state;
-            navigate(UrlPath || '/');
+        try {
+            setloading(true);
+            event.preventDefault();
+            const Result = await Login(loginDetail);
+            if (Result) {
+                const UrlPath = location.state;
+                navigate(UrlPath || '/');
+            }
+        } catch (error) { } finally {
+            setloading(false);
         }
+
         /* 
         this location.state is from Spinner.js (why we are using location.)state here?   because when click on login submit button it should be navigate to the Home page. but if he has a link of dashboard/cart/anyother then after click on submit he should be navigate to that location not on home page.
     */}

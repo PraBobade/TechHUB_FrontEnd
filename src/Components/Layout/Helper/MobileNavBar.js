@@ -20,11 +20,11 @@ export default function MobileNavBar() {
 
     const Authheading = ['My Account', 'Order History', 'Wishlist', 'Logout']
     const Authicons = ['fa-circle-user', 'fa-truck-fast', 'fa-thumbs-up', 'fa-power-off']
-    const AuthtoLink = ['/user/dashboard', '/user/order', '/user/wish-list']
+    const AuthtoLink = ['dashboard', 'order', 'wish-list']
 
     const Adminheading = ['My Account', 'Orders', 'Logout']
     const AdminIcons = ['fa-circle-user', 'fa-truck-fast', 'fa-power-off']
-    const AdminToLink = ['/admin/dashboard', '/admin/manage-orders']
+    const AdminToLink = ['dashboard', 'manage-orders']
 
     const [SearchKeyword, setSearchKeyword] = useState('');
 
@@ -79,7 +79,7 @@ export default function MobileNavBar() {
                                         <div key={index} >
                                             {item !== 'Logout' ?
                                                 <>
-                                                    <Link to={AdminToLink[index]} className="dropdown-item" >
+                                                    <Link to={`/admin/${Auth?.user?.UserID}/${AdminToLink[index]}`} className="dropdown-item" >
                                                         <div className="co-user-icon">
                                                             <i className={`fa-solid ${AdminIcons[index]}`}></i>
                                                         </div>
@@ -103,7 +103,7 @@ export default function MobileNavBar() {
                                         <div key={index} >
                                             {item !== 'Logout' ?
                                                 <>
-                                                    <Link to={AuthtoLink[index]} className="dropdown-item" >
+                                                    <Link to={`/user/${Auth?.user?.UserID}/${AuthtoLink[index]}`} className="dropdown-item" >
                                                         <div className="co-user-icon">
                                                             <i className={`fa-solid ${Authicons[index]}`}></i>
                                                         </div>
