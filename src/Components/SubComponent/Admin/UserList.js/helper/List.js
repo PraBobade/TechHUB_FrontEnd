@@ -36,13 +36,13 @@ export default function List() {
                             return (
                                 <tr key={index}>
                                     <th className='table-Fields' scope="row">{index + 1}</th>
-                                    <td className='table-Fields'>{user.name}</td>
-                                    <td className='table-Fields'>{user.email}</td>
-                                    <td className='table-Fields'>{user.phone}</td>
-                                    <td className='table-Fields'>{user.address.city},{user.address.state}</td>
-                                    <td className='table-Fields'>{user.role}</td>
+                                    <td className='table-Fields'>{user?.name}</td>
+                                    <td className='table-Fields'>{user?.email}</td>
+                                    <td className='table-Fields'>{user?.phone}</td>
+                                    <td className='table-Fields'>{user?.address?.city},{user.address.state}</td>
+                                    <td className='table-Fields'>{user?.role}</td>
                                     {user.name !== "PRADIP DILIP BOBADE" &&
-                                        <td><button onClick={() => { handleDelete(user._id) }} className='DeleteUser'>Delete</button></td>
+                                        <td><button onClick={() => { handleDelete(user?._id) }} className='DeleteUser'>Delete</button></td>
                                     }
                                 </tr>
                             )

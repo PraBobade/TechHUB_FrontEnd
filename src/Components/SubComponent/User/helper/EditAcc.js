@@ -33,7 +33,7 @@ export default function EditAcc() {
 
     const statesInIndia = ["N/A", 'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal', 'Andaman and Nicobar Islands', 'Chandigarh', 'Dadra and Nagar Haveli', 'Daman and Diu', 'Lakshadweep', 'Delhi', 'Puducherry'];
 
-    const condition = (UpdatedAddress.complete_address !== "N/A" && UpdatedAddress.pin !== "000000" && UpdatedAddress.city !== "N/A" && UpdatedAddress.state !== "N/A");
+    const condition = (UpdatedAddress?.complete_address !== "N/A" && UpdatedAddress?.pin !== "000000" && UpdatedAddress?.city !== "N/A" && UpdatedAddress?.state !== "N/A");
 
     async function handleSubmit(event) {
         try {
@@ -80,7 +80,7 @@ export default function EditAcc() {
 
                 <div className="Form-Field">
                     <label className='Field-Label' htmlFor="complete-address">Address  </label>
-                    <input type="text" className='Field-Input' value={UpdatedAddress.complete_address}
+                    <input type="text" className='Field-Input' value={UpdatedAddress?.complete_address}
                         onChange={(event) => {
                             SetUpdatedUser((prevUser) => ({
                                 ...prevUser,
@@ -94,11 +94,11 @@ export default function EditAcc() {
                 <div className="Form-Grid">
                     <div className="Form-Field Grid-Field">
                         <label className='Field-Label' htmlFor="country">Country</label>
-                        <input className='Field-Input' type="text" id="country" value={UpdatedAddress.country} disabled />
+                        <input className='Field-Input' type="text" id="country" value={UpdatedAddress?.country} disabled />
                     </div>
                     <div className="Form-Field Grid-Field">
                         <label className='Field-Label' htmlFor="state">State</label>
-                        <select className='Field-Input' value={UpdatedAddress.state} id="state"
+                        <select className='Field-Input' value={UpdatedAddress?.state} id="state"
                             onChange={(event) => {
                                 SetUpdatedUser((prevUser) => ({
                                     ...prevUser,
@@ -125,7 +125,7 @@ export default function EditAcc() {
                                 }
                             }));
                         }}
-                            value={UpdatedAddress.city} type="text" className='Field-Input' id="city" required />
+                            value={UpdatedAddress?.city} type="text" className='Field-Input' id="city" required />
                     </div>
                     <div className="Form-Field Grid-Field">
                         <label className='Field-Label' htmlFor="zip">Pin Code</label>
@@ -138,7 +138,7 @@ export default function EditAcc() {
                                 }
                             }));
                         }}
-                            value={UpdatedAddress.pin} type="text" className='Field-Input' id="zip" required />
+                            value={UpdatedAddress?.pin} type="text" className='Field-Input' id="zip" required />
                     </div>
                 </div>
                 <div className="Button-Field">

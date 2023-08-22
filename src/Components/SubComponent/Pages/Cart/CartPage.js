@@ -26,7 +26,7 @@ export default function CartPage() {
                         <div className='Form-Heading'>{`You Have ${CartProducts.length} Products in Cart`}</div>
                         <div className="CartProductList">
                             {CartProducts?.map((product, index) => {
-                                price += product.price * product.quantity;
+                                price += product?.price * product?.quantity;
                                 return (
                                     <div key={index} className="Each-Cart-Product">
                                         <div className="Order-Image">
@@ -34,21 +34,21 @@ export default function CartPage() {
                                         </div>
                                         <div className='Order-Details'>
                                             <li className="Orders-Info">
-                                                <Link style={{ textDecoration: "none", color: "black" }} to={`/product/${product.slug}`}>
-                                                    <span style={{ fontWeight: "bolder" }} className='Order-Info-result'>{product.name} </span>
+                                                <Link style={{ textDecoration: "none", color: "black" }} to={`/product/${product?.slug}`}>
+                                                    <span style={{ fontWeight: "bolder" }} className='Order-Info-result'>{product?.name} </span>
                                                 </Link>
                                             </li>
                                             <li className="Orders-Info">
                                                 <span className='Order-Info-Label'>Unit Price</span>
-                                                <span className='Order-Info-result'>{ConvertToINR(product.price)} </span>
+                                                <span className='Order-Info-result'>{ConvertToINR(product?.price)} </span>
                                             </li>
                                         </div>
                                         <div className="Order-Details ">
                                             <li className="Orders-Info">
                                                 <span className='Order-Info-Label'>Qauntity</span>
                                                 <span className='Order-Info-result'>
-                                                    <button onClick={() => { SetQuantity(product, product.quantity - 1) }} className="QuantityIcons fa-regular fa-square-minus" disabled={product.quantity === 1} />{product.quantity}
-                                                    <button onClick={() => { SetQuantity(product, product.quantity + 1) }} className="QuantityIcons fa-regular fa-square-plus" disabled={product.quantity === 10} />
+                                                    <button onClick={() => { SetQuantity(product, product?.quantity - 1) }} className="QuantityIcons fa-regular fa-square-minus" disabled={product?.quantity === 1} />{product?.quantity}
+                                                    <button onClick={() => { SetQuantity(product, product?.quantity + 1) }} className="QuantityIcons fa-regular fa-square-plus" disabled={product?.quantity === 10} />
                                                 </span>
                                             </li>
                                         </div>

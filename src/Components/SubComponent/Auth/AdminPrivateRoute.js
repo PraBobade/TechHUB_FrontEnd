@@ -5,14 +5,14 @@ import AuthContext from "../../../Context/AuthContext.js";
 
 export default function AdminPrivateRoute() {
     const { AdminPrivateRoutes, Auth } = useContext(AuthContext)
-    const [ok, setOk] = useState(Auth.isAdmin);
+    const [ok, setOk] = useState(Auth?.isAdmin);
 
     async function AuthCheck() {
-        console.log("Authc is checking....", Auth.isAdmin);
+        console.log("Authc is checking....", Auth?.isAdmin);
         const Result = await AdminPrivateRoutes();
         if (Result) {
             setOk(true);
-            console.log("Authc is checking completed.", Auth.isAdmin);
+            console.log("Authc is checking completed.", Auth?.isAdmin);
             return true
         }
         else {

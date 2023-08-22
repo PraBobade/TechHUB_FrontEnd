@@ -94,8 +94,8 @@ export default function UsersHomePage() {
                     <div className="Second-Content">
                         {AllCategories?.slice(0, 4).map((item, index) => {
                             return (
-                                <Link className="Category-Block" onClick={() => { SetCategoryWiseProduct(item._id) }} key={item._id} to={`/category/${item._id}`} style={{ backgroundColor: 'rgb(245 245 245)' }}>
-                                    <h4 className="Category-Heading">{item.name}</h4>
+                                <Link className="Category-Block" onClick={() => { SetCategoryWiseProduct(item?._id) }} key={item?._id} to={`/category/${item?._id}`} style={{ backgroundColor: 'rgb(245 245 245)' }}>
+                                    <h4 className="Category-Heading">{item?.name}</h4>
                                     <p className="Category-Title">{CategoryTitle[index]}</p>
                                     <div className='Category-Image'>
                                         <img className='Home-CategoryImage-Size' src={CategoryImg[index]} alt="" />
@@ -143,19 +143,19 @@ export default function UsersHomePage() {
                         <h2 className="Forth-Content-Heading">New Products</h2>
                         <div className="Content-Products">
                             <div className="Product-List">
-                                {AllProducts.slice(-4).reverse().map((product, index) => {
+                                {AllProducts?.slice(-4).reverse().map((product, index) => {
                                     return (
                                         <div key={index} className="Each-Product card">
                                             <div className="product-img">
-                                                <img className='product-img-size' src={`${BASE_URL}/api/v1/product/product-photo/${product._id}`} alt={product.name} />
+                                                <img className='product-img-size' src={`${BASE_URL}/api/v1/product/product-photo/${product?._id}`} alt={product?.name} />
                                                 <div className="Like-Product">
-                                                    {LikeProducts.some((item) => item._id === product._id) ?
+                                                    {LikeProducts?.some((item) => item?._id === product?._id) ?
                                                         <i onClick={() => { DislikeProduct(product) }} className="fa-solid fa-heart" style={{ color: "#f1092c" }} /> :
                                                         <i onClick={() => { AddLikeProduct(product) }} className="fa-regular fa-heart" />
                                                     }
                                                 </div>
                                             </div>
-                                            <Link to={`/product/${product.slug}`} className="product-body">
+                                            <Link to={`/product/${product?.slug}`} className="product-body">
                                                 <div className="product-model-rating">
                                                     <span className='product-model'>Model {product?.model}</span>
                                                     <span className='product-rating '><i className="fa-solid fa-star" />4+</span>
@@ -164,10 +164,10 @@ export default function UsersHomePage() {
                                                 <div className="product-name">{product?.name}</div>
                                                 <div className="product-price">
                                                     <span className="New-Price">
-                                                        ₹ {product.price}
+                                                        ₹ {product?.price}
                                                     </span>
                                                     <span className="Old-Price">
-                                                        ₹{product.price + 100}
+                                                        ₹{product?.price + 100}
                                                     </span>
                                                 </div>
                                                 {product?.availability === 'Out Of Stock' &&

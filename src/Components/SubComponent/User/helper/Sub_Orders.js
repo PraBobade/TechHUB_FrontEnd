@@ -39,15 +39,15 @@ export default function Sub_Orders() {
                             <div className="OrderInfo">
                                 <li className="Orders-Info">
                                     <span className='Order-Info-Label'>OrderID</span>
-                                    <span className='Order-Info-result'>{order._id}</span>
+                                    <span className='Order-Info-result'>{order?._id}</span>
                                 </li>
                                 <li className="Orders-Info">
                                     <span className='Order-Info-Label'>Ordered</span>
-                                    <span className='Order-Info-result'>{moment(order.createdAt).format('D MMM YYYY, h:mm A')}</span>
+                                    <span className='Order-Info-result'>{moment(order?.createdAt).format('D MMM YYYY, h:mm A')}</span>
                                 </li>
                                 <li className="Orders-Info">
                                     <span className='Order-Info-Label'>Total Price</span>
-                                    <span className='Order-Info-result'>{ConvertToINR(order.amount)}</span>
+                                    <span className='Order-Info-result'>{ConvertToINR(order?.amount)}</span>
                                 </li>
                             </div>
                             <div className="Order-Products">
@@ -76,16 +76,16 @@ export default function Sub_Orders() {
                             </div>
                             <div className="Order-Status">
                                 <span className='Order-Info-result'>
-                                    <div className='Status_Dot' style={{ backgroundColor: GetMessage(order.status).StatusColor }} />
-                                    {order.status}
+                                    <div className='Status_Dot' style={{ backgroundColor: GetMessage(order?.status).StatusColor }} />
+                                    {order?.status}
                                 </span>
                                 <div className='Order-status-msg'>
-                                    {GetMessage(order.status).StatusMessage}
+                                    {GetMessage(order?.status).StatusMessage}
                                 </div>
                             </div>
                             <div className="CancelOrder">
-                                {(order.status !== 'Cancelled' && order.status !== "Delivered") &&
-                                    <button onClick={async () => { await CancelOrder(order._id) }} className='CancelButton'>Cancel Order</button>
+                                {(order?.status !== 'Cancelled' && order?.status !== "Delivered") &&
+                                    <button onClick={async () => { await CancelOrder(order?._id) }} className='CancelButton'>Cancel Order</button>
                                 }
                             </div>
                         </div>

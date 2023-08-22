@@ -68,7 +68,7 @@ export default function AdminProductList() {
                                         }}>
                                         <option value="Reset">Category</option>
                                         {AllCategories.map((item) => {
-                                            return <option className='Order-Info-result' key={item._id} value={item._id}>{item.name}</option>
+                                            return <option className='Order-Info-result' key={item?._id} value={item?._id}>{item?.name}</option>
                                         })}
                                     </select>
                                 </div>

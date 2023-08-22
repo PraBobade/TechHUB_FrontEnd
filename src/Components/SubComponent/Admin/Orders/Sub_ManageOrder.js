@@ -59,21 +59,21 @@ export default function Sub_ManageOrder() {
                                 </li>
                                 <li className="Orders-Info">
                                     <span className='Order-Info-Label'>OrderID</span>
-                                    <span className='Order-Info-result'>{order._id}</span>
+                                    <span className='Order-Info-result'>{order?._id}</span>
                                 </li>
                                 <li className="Orders-Info">
                                     <span className='Order-Info-Label'>Ordered</span>
-                                    <span className='Order-Info-result'>{moment(order.createdAt).fromNow()}</span>
+                                    <span className='Order-Info-result'>{moment(order?.createdAt).fromNow()}</span>
                                 </li>
                                 <li className="Orders-Info">
                                     <span className='Order-Info-Label'>Total Price</span>
-                                    <span className='Order-Info-result'>{ConvertToINR(order.amount)}</span>
+                                    <span className='Order-Info-result'>{ConvertToINR(order?.amount)}</span>
                                 </li>
                             </div>
                             <div className="Order-Products">
                                 {order?.products?.map((pro) => {
                                     return (
-                                        <div key={pro._id} className="EachProduct">
+                                        <div key={pro?._id} className="EachProduct">
                                             <div className="Order-Image">
                                                 <img className="Order-Img-Size" src={`${BASE_URL}/api/v1/product/product-photo/${pro?.product._id}`} />
                                             </div>
@@ -96,14 +96,14 @@ export default function Sub_ManageOrder() {
                             </div>
                             <div className="Handle-Order">
                                 <div className="CancelOrder">
-                                    <button onClick={async () => { await DeleteOrder(order._id) }} className='CancelButton'>Delete Order</button>
+                                    <button onClick={async () => { await DeleteOrder(order?._id) }} className='CancelButton'>Delete Order</button>
                                 </div>
                                 <div className='Order-Status'>
                                     <span className='Order-Info-Label'>Order Status</span>
                                     <div className='Order-status-msg'>
-                                        <select className='OrderSelect' value={order.status}
-                                            onChange={(event) => { SetOrderStatus(order._id, event.target.value) }} name="status" id="status" >
-                                            {Status.map((st, index) => {
+                                        <select className='OrderSelect' value={order?.status}
+                                            onChange={(event) => { SetOrderStatus(order?._id, event.target.value) }} name="status" id="status" >
+                                            {Status?.map((st, index) => {
                                                 return <option key={index + 'status'} value={st}>{st}</option>
                                             })}
                                         </select>

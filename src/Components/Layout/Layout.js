@@ -24,8 +24,8 @@ export default function Layout({ children, title, description, keywords, author 
 }
 
 Layout.defaultProps = {
-  title: "Eccomerse Store - Shop Now",
-  description: "A Ecommerse Store you can buy all the Product from here.",
+  title: "TechHUB - Shop Now",
+  description: "A TechHUB you can buy all the Product from here.",
   keywords: "mern, react, node, mongodb",
   author: "Pradip Bobade"
 }

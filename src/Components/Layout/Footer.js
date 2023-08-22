@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import '../../Public/Css/Layout/Footer.css'
 import { BsTelephoneOutbound } from 'react-icons/bs'
+import AuthContext from '../../Context/AuthContext'
 
 export default function Footer() {
+  const { Auth } = useContext(AuthContext);
   return (
     <div className="Footer appfont">
       <div className="Footer-Content">
@@ -19,10 +21,10 @@ export default function Footer() {
         <div className="Content-Row">
           <div className='Footer-Heading'>My Account</div>
           <ul className="Row-List">
-            <li ><Link to='/user/dashboard' className='Row-List-Item'>Account</Link></li>
-            <li ><Link to='/user/wish-list' className='Row-List-Item'>WishList</Link></li>
-            <li ><Link to='/user/order' className='Row-List-Item'>Orders</Link></li>
-            <li ><Link to='/user/transaction' className='Row-List-Item'>Transaction</Link></li>
+            <li ><Link to={`/user/${Auth?.user?.UserID}/dashboard`} className='Row-List-Item'>Account</Link></li>
+            <li ><Link to={`/user/${Auth?.user?.UserID}/wish-list`} className='Row-List-Item'>WishList</Link></li>
+            <li ><Link to={`/user/${Auth?.user?.UserID}/order`} className='Row-List-Item'>Orders</Link></li>
+            <li ><Link to={`/user/${Auth?.user?.UserID}/transaction`} className='Row-List-Item'>Transaction</Link></li>
           </ul>
         </div>
         <div className="Content-Row">

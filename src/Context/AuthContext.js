@@ -14,8 +14,8 @@ export function AuthenticationState(props) {
     async function GetAuthInfo() {
         if (LocalAuth) {
             const ParsedData = JSON.parse(LocalAuth);
-            setAuth({ user: ParsedData.user, token: ParsedData.token, isAdmin: (ParsedData.user.role === 'Admin') });
-            return ParsedData.token
+            setAuth({ user: ParsedData?.user, token: ParsedData?.token, isAdmin: (ParsedData?.user.role === 'Admin') });
+            return ParsedData?.token
         } else {
             setAuth({ user: ``, token: ``, isAdmin: 'false' });
             return ''
@@ -30,10 +30,10 @@ export function AuthenticationState(props) {
         const { name, role, password, email, phone } = AdminDetails;
         const Result = await axios.post(`${BASE_URL}/api/v1/auth/register`, { name, role, password, email, phone });
         if (Result.data.status === 'Pass') {
-            toast.success(Result.data.message);
+            toast.success(Result?.data?.message);
             return true
         } else {
-            toast.error(Result.data.message);
+            toast.error(Result?.data?.message);
         }
     }
     async function RegisterUser(UserDetails) {

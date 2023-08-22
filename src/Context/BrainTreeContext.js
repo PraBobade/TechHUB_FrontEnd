@@ -11,7 +11,7 @@ export function BrainTreeState({ children }) {
     /* ${BASE_URL} */
     async function GetBrainTreeToken() {
         const Result = await axios.get(`${BASE_URL}/api/v1/braintree/token`);
-        if (Result.data.status === 'Pass') {
+        if (Result?.data?.status === 'Pass') {
             setClientToken(Result.data.response.clientToken)
         }
     }
@@ -19,9 +19,9 @@ export function BrainTreeState({ children }) {
     async function BrainTreePayment(nonce) {
         try {
             const cart = JSON.parse(localStorage.getItem('cart'));
-            const result = await axios.post(`${BASE_URL}/api/v1/braintree/payment`,
-                { nonce, cart }, { headers: { Authorization: "Bearer " + Auth.token } });
-            if (result.data.ok) {
+            const Result = await axios.post(`${BASE_URL}/api/v1/braintree/payment`,
+                { nonce, cart }, { headers: { Authorization: "Bearer " + Auth?.token } });
+            if (Result.data.ok) {
                 GetAllUserOrder();
                 return true
             } else {
@@ -36,9 +36,9 @@ export function BrainTreeState({ children }) {
     async function COD_Payment() {
         try {
             const cart = JSON.parse(localStorage.getItem('cart'));
-            const result = await axios.post(`${BASE_URL}/api/v1/braintree/cod-payment`,
-                { cart }, { headers: { Authorization: "Bearer " + Auth.token } });
-            if (result.data.ok) {
+            const Result = await axios.post(`${BASE_URL}/api/v1/braintree/cod-payment`,
+                { cart }, { headers: { Authorization: "Bearer " + Auth?.token } });
+            if (Result.data.ok) {
                 GetAllUserOrder();
                 return true
             } else {
@@ -55,11 +55,11 @@ export function BrainTreeState({ children }) {
     const [UserOrders, SetUserOrders] = useState([]);
     async function GetAllUserOrder() {
         try {
-            const result = await axios.get(`${BASE_URL}/api/v1/orders/all-user-orders`,
-                { headers: { Authorization: "Bearer " + Auth.token } });
-            if (result.data.status === 'Pass') {
-                SetUserOrders(result?.data?.orders);
-                return result.data
+            const Result = await axios.get(`${BASE_URL}/api/v1/orders/all-user-orders`,
+                { headers: { Authorization: "Bearer " + Auth?.token } });
+            if (Result?.data?.status === 'Pass') {
+                SetUserOrders(Result?.data?.orders);
+                return Result.data
             } else {
                 return false
             }
@@ -70,10 +70,10 @@ export function BrainTreeState({ children }) {
     const [AdminAllOrders, SetAdminAllOrders] = useState([]);
     async function GetAllAdminOrder() {
         try {
-            const result = await axios.get(`${BASE_URL}/api/v1/admin/orders/all-orders`,
-                { headers: { Authorization: "Bearer " + Auth.token } });
-            if (result.data.status === 'Pass') {
-                SetAdminAllOrders(result?.data?.orders);
+            const Result = await axios.get(`${BASE_URL}/api/v1/admin/orders/all-orders`,
+                { headers: { Authorization: "Bearer " + Auth?.token } });
+            if (Result?.data?.status === 'Pass') {
+                SetAdminAllOrders(Result?.data?.orders);
             } else {
                 return false
             }
@@ -84,19 +84,19 @@ export function BrainTreeState({ children }) {
     // filter orders
     async function FilterAdminOrder(Data) {
         try {
-            const result = await axios.post(`${BASE_URL}/api/v1/admin/orders/filter-orders`,
-                Data, { headers: { Authorization: "Bearer " + Auth.token } });
-            if (result.data.status === 'Pass') {
-                SetAdminAllOrders(result?.data?.orders);
+            const Result = await axios.post(`${BASE_URL}/api/v1/admin/orders/filter-orders`,
+                Data, { headers: { Authorization: "Bearer " + Auth?.token } });
+            if (Result?.data?.status === 'Pass') {
+                SetAdminAllOrders(Result?.data?.orders);
             }
         } catch (error) {
             toast.error(`Something went Wrong, Please Try Later`);
         }
     }
     async function CancelOrder(OrderId) {
-        const result = await axios.put(`${BASE_URL}/api/v1/orders/cancel-UserOrder/${OrderId}`, { status: "Cancelled" },
-            { headers: { Authorization: "Bearer " + Auth.token } });
-        if (result.data.status === 'Pass') {
+        const Result = await axios.put(`${BASE_URL}/api/v1/orders/cancel-UserOrder/${OrderId}`, { status: "Cancelled" },
+            { headers: { Authorization: "Bearer " + Auth?.token } });
+        if (Result?.data?.status === 'Pass') {
             toast.success('The Order Cancelled Successfully');
             GetAllAdminOrder();
             GetAllUserOrder();
@@ -105,9 +105,9 @@ export function BrainTreeState({ children }) {
         }
     }
     async function SetOrderStatus(OrderID, status) {
-        const result = await axios.put(`${BASE_URL}/api/v1/admin/orders/set-status/${OrderID}`,
-            { status }, { headers: { Authorization: "Bearer " + Auth.token } });
-        if (result.data.status === 'Pass') {
+        const Result = await axios.put(`${BASE_URL}/api/v1/admin/orders/set-status/${OrderID}`,
+            { status }, { headers: { Authorization: "Bearer " + Auth?.token } });
+        if (Result?.data?.status === 'Pass') {
             toast.success('The Status Changed Successfully');
             GetAllAdminOrder();
         } else {
@@ -115,10 +115,10 @@ export function BrainTreeState({ children }) {
         }
     }
     async function DeleteOrder(OrderID) {
-        const result = await axios.delete(`${BASE_URL}/api/v1/admin/orders/delete-order/${OrderID}`,
-            { headers: { Authorization: "Bearer " + Auth.token } });
-        if (result.data.status === 'Pass') {
-            toast.success(result?.data?.message);
+        const Result = await axios.delete(`${BASE_URL}/api/v1/admin/orders/delete-order/${OrderID}`,
+            { headers: { Authorization: "Bearer " + Auth?.token } });
+        if (Result?.data?.status === 'Pass') {
+            toast.success(Result?.data?.message);
             GetAllAdminOrder();
         } else {
             toast.error('Error in Deleting Order');
@@ -131,7 +131,7 @@ export function BrainTreeState({ children }) {
             GetAllAdminOrder();
             GetBrainTreeToken();
         }
-    }, [Auth.token])
+    }, [Auth?.token])
 
     return (
         <BrainTreeContext.Provider value={{

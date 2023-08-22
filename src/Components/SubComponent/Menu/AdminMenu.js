@@ -14,7 +14,7 @@ export default function AdminMenu() {
             <ol className="User-Menu Menu appfont">
                 {MenuItem.map((item, index) => (
                     <li className="User-Menu-Item" key={index}>
-                        <NavLink to={`/admin/${Auth.user.UserID}/${toLink[index]}`} className="List-Link">
+                        <NavLink to={`/admin/${Auth?.user?.UserID}/${toLink[index]}`} className="List-Link">
                             <div className="List-Icon">
                                 <i className={`${iconClasses[index]}`}></i>
                             </div>

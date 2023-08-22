@@ -25,12 +25,12 @@ export default function CategoryList() {
                     </tr>
                 </thead>
                 <tbody>
-                    {AllCategories.map((cate, index) => {
+                    {AllCategories?.map((cate, index) => {
                         return (
-                            <tr key={cate._id}>
+                            <tr key={cate?._id}>
                                 <th className='table-Fields' scope="row">{index + 1}</th>
                                 <td className='table-Fields'>
-                                    {ShowInput && id === cate._id ?
+                                    {ShowInput && id === cate?._id ?
                                         <div className='Edit-Category'>
                                             <input type="text" className='Field-Input'
                                                 value={UpdatedName} onChange={(event) => {
@@ -38,13 +38,13 @@ export default function CategoryList() {
                                                 }} />
                                             <button className="CategoryEditBtn" onClick={handleSubmit} >Update</button>
                                         </div>
-                                        : cate.name}
+                                        : cate?.name}
                                 </td>
                                 <td className='table-Fields'>
                                     <button className="CategoryEditBtn" onClick={() => {
-                                        setEditDetails({ ...editDetails, id: cate._id, UpdatedName: cate.name, ShowInput: true });
+                                        setEditDetails({ ...editDetails, id: cate?._id, UpdatedName: cate?.name, ShowInput: true });
                                     }}> Edit </button>
-                                    <button className="CategoryDeleteBtn" onClick={() => { DeleteCategory(cate._id) }}> Delete </button>
+                                    <button className="CategoryDeleteBtn" onClick={() => { DeleteCategory(cate?._id) }}> Delete </button>
                                 </td>
                             </tr>
 

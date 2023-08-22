@@ -17,10 +17,10 @@ export function ProductState(props) {
 
     async function GetAllCategories() {
         const Result = await axios.get(`${BASE_URL}/api/v1/category/showall-category`);
-        if (Result.data.status === 'Pass') {
+        if (Result?.data?.status === 'Pass') {
             setAllCategories(Result.data.categories);
         } else {
-            toast.error(Result.data.message);
+            toast.error(Result?.data?.message);
         }
     }
 
@@ -28,11 +28,11 @@ export function ProductState(props) {
         const Result = await axios.post(`${BASE_URL}/api/v1/category/create-category`, { name: newCategory }, {
             headers: { Authorization: "Bearer " + Auth.token }
         });
-        if (Result.data.status === "Pass") {
+        if (Result?.data?.status === "Pass") {
             GetAllCategories();
-            toast.success(Result.data.message)
+            toast.success(Result?.data?.message)
         } else {
-            toast.error(Result.data.message)
+            toast.error(Result?.data?.message)
         }
         return Result.data
     }
@@ -41,11 +41,11 @@ export function ProductState(props) {
         const Result = await axios.delete(`${BASE_URL}/api/v1/category/delete-category/${id}`, {
             headers: { Authorization: "Bearer " + Auth.token }
         });
-        if (Result.data.status === 'Pass') {
+        if (Result?.data?.status === 'Pass') {
             GetAllCategories();
-            toast.success(Result.data.message);
+            toast.success(Result?.data?.message);
         } else {
-            toast.error(Result.data.message)
+            toast.error(Result?.data?.message)
         }
     }
 
@@ -53,11 +53,11 @@ export function ProductState(props) {
         const Result = await axios.put(`${BASE_URL}/api/v1/category/update-category/${id}`, { name: UpdatedName }, {
             headers: { Authorization: "Bearer " + Auth.token }
         });
-        if (Result.data.status === 'Pass') {
-            toast.success(Result.data.message);
+        if (Result?.data?.status === 'Pass') {
+            toast.success(Result?.data?.message);
             GetAllCategories();
         } else {
-            toast.error(Result.data.message);
+            toast.error(Result?.data?.message);
         }
     }
 
@@ -80,17 +80,17 @@ export function ProductState(props) {
         const Result = await axios.put(`${BASE_URL}/api/v1/product/update-product/${Product_id}`, formData, {
             headers: { Authorization: "Bearer " + Auth.token }
         });
-        if (Result.data.status === 'Pass') {
+        if (Result?.data?.status === 'Pass') {
             GetAllProducts();
-            toast.success(Result.data.message);
+            toast.success(Result?.data?.message);
         } else {
-            toast.error(Result.data.message);
+            toast.error(Result?.data?.message);
         }
     }
 
     async function GetProductDetails(slug) {
         const Result = await axios.get(`${BASE_URL}/api/v1/product/single-product/${slug}`);
-        if (Result.data.status === 'Pass') {
+        if (Result?.data?.status === 'Pass') {
             return Result?.data?.product
         } else {
             toast.error(Result?.data?.message);
@@ -107,8 +107,8 @@ export function ProductState(props) {
 
     async function GetAllProducts() {
         const Result = await axios.get(`${BASE_URL}/api/v1/product/all-product`);
-        if (Result.data.status === 'Pass') {
-            setAllProducts(Result.data.products);
+        if (Result?.data?.status === 'Pass') {
+            setAllProducts(Result?.data?.products);
         }
         return Result
     }
@@ -117,8 +117,8 @@ export function ProductState(props) {
     const [CategoryProducts, setCategoryProduct] = useState([])
     async function SetCategoryWiseProduct(ID) {
         const Result = await axios.get(`${BASE_URL}/api/v1/product/getCategoryProducts/${ID}`);
-        if (Result.data.status === 'Pass') {
-            setCategoryProduct(Result.data.products);
+        if (Result?.data?.status === 'Pass') {
+            setCategoryProduct(Result?.data?.products);
         }
     }
 
@@ -126,21 +126,21 @@ export function ProductState(props) {
     async function DeleteProduct(id) {
         const Result = await axios.delete(`${BASE_URL}/api/v1/product/Delete-product/${id}`,
             { headers: { Authorization: "Bearer " + Auth.token } });
-        if (Result.data.status === 'Pass') {
+        if (Result?.data?.status === 'Pass') {
             GetAllProducts();
-            toast.success(Result.data.message, { style: { color: '#fff', borderRadius: '10px', background: '#333' } });
+            toast.success(Result?.data?.message, { style: { color: '#fff', borderRadius: '10px', background: '#333' } });
         } else {
-            toast.error(Result.data.message);
+            toast.error(Result?.data?.message);
         }
     }
 
     async function SearchProduct(SearchKeyword) {
         const Result = await axios.get(`${BASE_URL}/api/v1/product/search/${SearchKeyword}`);
-        if (Result.data.status === 'Pass') {
-            setSearchResult({ Results: Result.data.products });
+        if (Result?.data?.status === 'Pass') {
+            setSearchResult({ Results: Result?.data?.products });
             return true
         } else {
-            toast.error(Result.data.message);
+            toast.error(Result?.data?.message);
         }
     }
 
@@ -149,11 +149,11 @@ export function ProductState(props) {
     async function FilterProducts(FilterData) {
         const Result = await axios.post(`${BASE_URL}/api/v1/product/filter-product`, FilterData,
             { headers: { 'Content-Type': 'application/json' } });
-        if (Result.data.status === 'Pass') {
-            SetFilteredResult(Result.data.products);
+        if (Result?.data?.status === 'Pass') {
+            SetFilteredResult(Result?.data?.products);
             return Result;
         } else {
-            toast.error(Result.data.message);
+            toast.error(Result?.data?.message);
         }
     }
 
@@ -170,7 +170,7 @@ export function ProductState(props) {
         }
     }
     async function DislikeProduct(product) {
-        const RemoveProduct = LikeProducts.filter(item => item._id !== product._id);
+        const RemoveProduct = LikeProducts.filter(item => item?._id !== product?._id);
         localStorage.setItem('like', JSON.stringify(RemoveProduct))
         SetLikeProducts();
     }
@@ -178,10 +178,10 @@ export function ProductState(props) {
     // Cart
     const [CartProducts, setCartProduct] = useState([]);
     async function AddProductToCart(CartItem) {
-        if (!CartProducts.some(element => element._id === CartItem._id)) {
+        if (!CartProducts.some(element => element._id === CartItem?._id)) {
             localStorage.setItem('cart', JSON.stringify([...CartProducts, CartItem]))
             SetCartItems();
-            toast.success(`${CartItem.name} Added to Cart`);
+            toast.success(`${CartItem?.name} Added to Cart`);
         } else {
             toast.error("The Product is Already added in Cart...")
         }
@@ -189,7 +189,7 @@ export function ProductState(props) {
 
     async function SetCartQuntity(CartItem, quantity) {
         const Cart = JSON.parse(localStorage.getItem('cart'));
-        const productIndex = Cart.findIndex(product => product._id === CartItem._id);
+        const productIndex = Cart.findIndex(product => product?._id === CartItem?._id);
         if (productIndex !== -1) {
             Cart[productIndex].quantity = quantity;
             localStorage.setItem('cart', JSON.stringify(Cart));
@@ -206,10 +206,10 @@ export function ProductState(props) {
         }
     }
     async function RemoveProductCart(CartItem) {
-        const remove = CartProducts.filter(item => item._id !== CartItem._id);
+        const remove = CartProducts.filter(item => item?._id !== CartItem?._id);
         localStorage.setItem('cart', JSON.stringify(remove))
         SetCartItems();
-        toast.success(`${CartItem.name} Removed From Cart`)
+        toast.success(`${CartItem?.name} Removed From Cart`)
     }
 
     //Total Price 

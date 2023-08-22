@@ -87,15 +87,15 @@ export default function FilterProduct() {
                     {Prices.map((num, index) => {
                         return (
                             <li key={`keyprice${index}`} className='List-Item'>
-                                <input className='List-Input' type="radio" id={num.id}
-                                    value={JSON.stringify(num.range)}
+                                <input className='List-Input' type="radio" id={num?.id}
+                                    value={JSON.stringify(num?.range)}
                                     onChange={(event) => {
                                         event.preventDefault();
                                         setPriceRange(JSON.parse(event.target.value));
                                     }}
-                                    checked={JSON.stringify(PriceRange) === JSON.stringify(num.range)}
+                                    checked={JSON.stringify(PriceRange) === JSON.stringify(num?.range)}
                                 />
-                                <label className='List-Item-Label' htmlFor={num.id}>{num.name}</label>
+                                <label className='List-Item-Label' htmlFor={num?.id}>{num?.name}</label>
                             </li>)
                     })}
                 </div>
@@ -104,7 +104,7 @@ export default function FilterProduct() {
             <ol className="MenuItem MenuItem-2">
                 <div className="Menu-Heading"> Brand</div>
                 <div className="List">
-                    {BrandList.map((brn, index) => {
+                    {BrandList?.map((brn, index) => {
                         return (
                             <li key={`keybrand${index}`} className='List-Item'>
                                 <input className='List-Input' type="checkbox" id={`brand${index}`} value={brn}
@@ -137,10 +137,10 @@ export default function FilterProduct() {
                     {BatteryInMAH.map((bat, index) => {
                         return (
                             <li key={`keybattery${index}`} className='List-Item'>
-                                <input className='List-Input' type="radio" id={`bat${index}`} value={bat.range}
-                                    onChange={() => { setBattery(bat.range) }}
-                                    checked={JSON.stringify(Battery) === JSON.stringify(bat.range)} />
-                                <label className='List-Item-Label' htmlFor={`bat${index}`}>{bat.name}</label>
+                                <input className='List-Input' type="radio" id={`bat${index}`} value={bat?.range}
+                                    onChange={() => { setBattery(bat?.range) }}
+                                    checked={JSON.stringify(Battery) === JSON.stringify(bat?.range)} />
+                                <label className='List-Item-Label' htmlFor={`bat${index}`}>{bat?.name}</label>
 
                             </li>)
                     })}

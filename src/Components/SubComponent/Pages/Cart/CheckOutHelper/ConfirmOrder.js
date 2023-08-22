@@ -25,14 +25,14 @@ export default function ConfirmOrder({ OpenNext, nextItem }) {
                     </thead>
                     <tbody>
                         {CartProducts?.map((item) => {
-                            price += item.price * item.quantity;
+                            price += item?.price * item?.quantity;
                             return (
-                                <tr key={item._id}>
-                                    <td className='table-Fields'>{item.name}</td>
-                                    <td className='table-Fields'>{item.model}</td>
-                                    <td className='table-Fields'>{item.quantity}</td>
-                                    <td className='table-Fields'>{ConvertToINR(item.price)}</td>
-                                    <td className='table-Fields'>{ConvertToINR(item.price * item.quantity)}</td>
+                                <tr key={item?._id}>
+                                    <td className='table-Fields'>{item?.name}</td>
+                                    <td className='table-Fields'>{item?.model}</td>
+                                    <td className='table-Fields'>{item?.quantity}</td>
+                                    <td className='table-Fields'>{ConvertToINR(item?.price)}</td>
+                                    <td className='table-Fields'>{ConvertToINR(item?.price * item?.quantity)}</td>
                                 </tr>
                             )
                         })}

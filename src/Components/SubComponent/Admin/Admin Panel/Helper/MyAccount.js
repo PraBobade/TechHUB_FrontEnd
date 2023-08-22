@@ -22,7 +22,7 @@ export default function MyAccount() {
         <div className='MyAccount'>
             <div className="Acc-Items-List">
                 {Auth?.user?.role === "Admin" ? <>
-                    {AdminHeading.map((item, index) => {
+                    {AdminHeading?.map((item, index) => {
                         return (
                             <Link to={`/admin/${Auth?.user?.UserID}${AdminToLink[index]}`} key={index} className="Acc-EachItem">
                                 <div className="Acc-Icon">
@@ -36,7 +36,7 @@ export default function MyAccount() {
                         )
                     })}
                 </> : <>
-                    {UserHeading.map((item, index) => {
+                    {UserHeading?.map((item, index) => {
                         return (
                             <Link to={`/user/${Auth?.user?.UserID}${UserToLink[index]}`} key={index} className="Acc-EachItem">
                                 <div className="Acc-Icon">

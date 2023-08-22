@@ -49,18 +49,18 @@ export default function Transaction() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {UserOrders.length === 0 ? <tr >
+                                {UserOrders?.length === 0 ? <tr >
                                     <td className='table-Fields' scope="row"></td>
                                     <td className='table-Fields'>You do not have any transactions!</td>
                                     <td className='table-Fields'></td>
                                 </tr>
                                     : <>
-                                        {UserOrders.map((item, index) => {
+                                        {UserOrders?.map((item, index) => {
                                             return <tr key={index}>
                                                 <td className='table-Fields' scope="row">{moment(item?.createdAt).format('MMM-DD-YYYY | hh:mm A')}</td>
-                                                <td className='table-Fields'>{item.products.map((product) => {
+                                                <td className='table-Fields'>{item?.products.map((product) => {
                                                     return (
-                                                        <li className='list-points' key={product._id}>
+                                                        <li className='list-points' key={product?._id}>
                                                             {product?.product?.name}
                                                         </li>
                                                     )

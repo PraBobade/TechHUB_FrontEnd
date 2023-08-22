@@ -73,8 +73,8 @@ export default function MobileNavBar() {
                     </button>
                     <div className="dropdown-menu Mobile-dd" aria-labelledby="dropdownMenu2">
                         {Auth?.token ? <>
-                            {Auth?.user.role === "Admin" ? <>
-                                {Adminheading.map((item, index) => {
+                            {Auth?.user?.role === "Admin" ? <>
+                                {Adminheading?.map((item, index) => {
                                     return (
                                         <div key={index} >
                                             {item !== 'Logout' ?
@@ -98,7 +98,7 @@ export default function MobileNavBar() {
                                     )
                                 })}
                             </> : <>
-                                {Authheading.map((item, index) => {
+                                {Authheading?.map((item, index) => {
                                     return (
                                         <div key={index} >
                                             {item !== 'Logout' ?
@@ -124,7 +124,7 @@ export default function MobileNavBar() {
                             </>}
 
                         </> : <>
-                            {heading.map((item, index) => {
+                            {heading?.map((item, index) => {
                                 return (
                                     <Link to={toLink[index]} key={index} className="dropdown-item flex" type="button">
                                         <div className="co-user-icon">
@@ -139,7 +139,7 @@ export default function MobileNavBar() {
                     </div>
                 </div>
                 <div className="MobileIcons" >
-                    <Badge count={CartProducts.length} >
+                    <Badge count={CartProducts?.length} >
                         <Link to='/cart' className="Mo-Icons fa-solid fa-cart-shopping mo-cart" />
                     </Badge >
                 </div>

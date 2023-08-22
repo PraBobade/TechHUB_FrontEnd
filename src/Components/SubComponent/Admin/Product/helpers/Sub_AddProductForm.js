@@ -221,7 +221,7 @@ export default function AddProductForm() {
                     {ProductTag.length === 0 && <div className='Tag-Name-Remove'>
                         <div className='Tag-Name'> No Tag Added</div>
                     </div>}
-                    {ProductTag.map((text, index) => {
+                    {ProductTag?.map((text, index) => {
                         return (
                             <div key={index} className="Tag-Name-Remove">
                                 <div className='Tag-Name'>{text}</div>

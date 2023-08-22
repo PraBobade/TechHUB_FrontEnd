@@ -13,7 +13,7 @@ export default function SuccessPayment() {
     const showModal = useRef(null);
 
     async function Navigate() {
-        navigate(`/user/${Auth.user.UserID}/order`);
+        navigate(`/user/${Auth?.user?.UserID}/order`);
     }
     useEffect(() => {
         SetCartItems();

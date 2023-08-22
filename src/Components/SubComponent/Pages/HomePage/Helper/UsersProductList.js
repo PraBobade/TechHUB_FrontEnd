@@ -15,7 +15,7 @@ export default function HomeContent({ Products }) {
                 return (
                     <div key={index} className="Each-Product card">
                         <div className="product-img">
-                            <img className='product-img-size' src={`${BASE_URL}/api/v1/product/product-photo/${product._id}`} alt={product.name} />
+                            <img className='product-img-size' src={`${BASE_URL}/api/v1/product/product-photo/${product?._id}`} alt={product?.name} />
                             <div className="Like-Product">
                                 {LikeProducts.some((item) => item?._id === product?._id) ?
                                     <i onClick={() => { DislikeProduct(product) }} className="fa-solid fa-heart" style={{ color: "#f1092c" }} /> :
@@ -23,7 +23,7 @@ export default function HomeContent({ Products }) {
                                 }
                             </div>
                         </div>
-                        <Link to={`/product/${product.slug}`} className="product-body">
+                        <Link to={`/product/${product?.slug}`} className="product-body">
                             <div className="product-model-rating">
                                 <span className='product-model'>Model {product?.model}</span>
                                 <span className='product-rating '><i className="fa-solid fa-star fa-2xs" />4+</span>
@@ -32,10 +32,10 @@ export default function HomeContent({ Products }) {
                             <div className="product-name">{product?.name}</div>
                             <div className="product-price">
                                 <span className="New-Price">
-                                    {ConvertToINR(product.price)}
+                                    {ConvertToINR(product?.price)}
                                 </span>
                                 <span className="Old-Price">
-                                    {ConvertToINR(product.price + 100)}
+                                    {ConvertToINR(product?.price + 100)}
                                 </span>
                             </div>
                             {product?.availability === 'Out Of Stock' &&

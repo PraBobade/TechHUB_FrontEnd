@@ -217,7 +217,7 @@ export default function Sub_EditProduct({ slug }) {
                     }} className="Tag-Button">Add</button>
                 </div>
                 <div className="Tag-List">
-                    {UpdatedProductTag.map((text, index) => {
+                    {UpdatedProductTag?.map((text, index) => {
                         return (
                             <div key={index} className="Tag-Name-Remove">
                                 <div className='Tag-Name'>{text}</div>

@@ -10,16 +10,16 @@ export default function BillingDetails({ OpenNext, nextItem }) {
         if (Auth.user) {
             SetInfo({
                 ...Info,
-                name: Auth.user.name,
-                phone: Auth.user.phone,
-                email: Auth.user.email,
+                name: Auth?.user?.name,
+                phone: Auth?.user?.phone,
+                email: Auth?.user?.email,
                 address: {
                     ...address,
-                    complete_address: Auth?.user.address.complete_address,
-                    country: Auth.user.address.country,
-                    city: Auth.user.address.city,
-                    state: Auth.user.address.state,
-                    pin: Auth.user.address.pin
+                    complete_address: Auth?.user.address?.complete_address,
+                    country: Auth?.user?.address?.country,
+                    city: Auth?.user?.address?.city,
+                    state: Auth?.user?.address?.state,
+                    pin: Auth?.user?.address?.pin
                 }
             })
         }

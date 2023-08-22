@@ -83,7 +83,7 @@ export default function DeliveryDetails({ OpenNext, nextItem }) {
 
                     <div className="Form-Field">
                         <label className='Field-Label' htmlFor="field4">Address : </label>
-                        <input className="Field-Input" value={UpdatedAddress.complete_address}
+                        <input className="Field-Input" value={UpdatedAddress?.complete_address}
                             onChange={(event) => {
                                 SetUpdatedUser((prevUser) => ({
                                     ...prevUser,
@@ -98,11 +98,11 @@ export default function DeliveryDetails({ OpenNext, nextItem }) {
                     <div className="Form-Grid">
                         <div className="Form-Field Grid-Field">
                             <label className='Field-Label' htmlFor="country">Country</label>
-                            <input className="Field-Input" type="text" id="country" value={UpdatedAddress.country} disabled />
+                            <input className="Field-Input" type="text" id="country" value={UpdatedAddress?.country} disabled />
                         </div>
                         <div className="Form-Field Grid-Field">
                             <label className='Field-Label' htmlFor="state">State</label>
-                            <select value={UpdatedAddress.state} className="Field-Input" id="state"
+                            <select value={UpdatedAddress?.state} className="Field-Input" id="state"
                                 onChange={(event) => {
                                     SetUpdatedUser((prevUser) => ({
                                         ...prevUser,
@@ -113,7 +113,7 @@ export default function DeliveryDetails({ OpenNext, nextItem }) {
                                     }));
                                 }}
                                 required>
-                                {statesInIndia.map((state, index) => {
+                                {statesInIndia?.map((state, index) => {
                                     return <option key={index} value={state}>{state}</option>
                                 })}
                             </select>
@@ -129,7 +129,7 @@ export default function DeliveryDetails({ OpenNext, nextItem }) {
                                     }
                                 }));
                             }}
-                                value={UpdatedAddress.city} type="text" className="Field-Input" id="city" required />
+                                value={UpdatedAddress?.city} type="text" className="Field-Input" id="city" required />
                         </div>
                         <div className="Form-Field Grid-Field">
                             <label className='Field-Label' htmlFor="zip">Pin Code</label>
@@ -142,11 +142,11 @@ export default function DeliveryDetails({ OpenNext, nextItem }) {
                                     }
                                 }));
                             }}
-                                value={UpdatedAddress.pin} type="text" className="Field-Input" id="zip" required />
+                                value={UpdatedAddress?.pin} type="text" className="Field-Input" id="zip" required />
                         </div>
                     </div>
                     <div className="Button-Field">
-                        {(AddressType === 'diffAdd' && UpdatedAddress.complete_address !== "N/A" && UpdatedAddress.pin !== "000000" && UpdatedAddress.pin.length === 6 && UpdatedAddress.city !== "N/A" && UpdatedAddress.state !== "N/A") &&
+                        {(AddressType === 'diffAdd' && UpdatedAddress?.complete_address !== "N/A" && UpdatedAddress?.pin !== "000000" && UpdatedAddress?.pin.length === 6 && UpdatedAddress?.city !== "N/A" && UpdatedAddress?.state !== "N/A") &&
                             <button type="submit" className="Form-Save-Button" disabled={loading}>
                                 {loading ?
                                     <i className="fa-solid fa-spinner fa-spin-pulse" />
@@ -159,7 +159,7 @@ export default function DeliveryDetails({ OpenNext, nextItem }) {
             </>
             }
             <div className="Button-Field">
-                {(AddressType === 'sameAdd' && UpdatedAddress.complete_address !== "N/A" && UpdatedAddress.pin !== "000000" && UpdatedAddress.pin.length === 6 && UpdatedAddress.city !== "N/A" && UpdatedAddress.state !== "N/A") &&
+                {(AddressType === 'sameAdd' && UpdatedAddress?.complete_address !== "N/A" && UpdatedAddress?.pin !== "000000" && UpdatedAddress?.pin.length === 6 && UpdatedAddress?.city !== "N/A" && UpdatedAddress?.state !== "N/A") &&
                     <button onClick={() => { OpenNext("item3", nextItem) }} className="Form-Save-Button">Continue..</button>
                 }
             </div>

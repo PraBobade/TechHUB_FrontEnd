@@ -56,13 +56,13 @@ export default function ComNavBar() {
                         </button>
                         <div className="dropdown-menu Computer-dd" aria-labelledby="dropdownMenu2">
                             {Auth?.token ? <>
-                                {Auth?.user.role === "Admin" ? <>
-                                    {Adminheading.map((item, index) => {
+                                {Auth?.user?.role === "Admin" ? <>
+                                    {Adminheading?.map((item, index) => {
                                         return (
                                             <div key={index} >
                                                 {item !== 'Logout' ?
                                                     <>
-                                                        <Link to={`/admin/${Auth.user.UserID}/${AdminToLink[index]}`} className="dropdown-item" >
+                                                        <Link to={`/admin/${Auth?.user?.UserID}/${AdminToLink[index]}`} className="dropdown-item" >
                                                             <div className="co-user-icon">
                                                                 <i className={`fa-solid ${AdminIcons[index]}`}></i>
                                                             </div>
@@ -81,12 +81,12 @@ export default function ComNavBar() {
                                         )
                                     })}
                                 </> : <>
-                                    {Authheading.map((item, index) => {
+                                    {Authheading?.map((item, index) => {
                                         return (
                                             <div key={index} >
                                                 {item !== 'Logout' ?
                                                     <>
-                                                        <Link to={`/user/${Auth.user.UserID}/${AuthtoLink[index]}`} className="dropdown-item" >
+                                                        <Link to={`/user/${Auth?.user?.UserID}/${AuthtoLink[index]}`} className="dropdown-item" >
                                                             <div className="co-user-icon">
                                                                 <i className={`fa-solid ${Authicons[index]}`}></i>
                                                             </div>
@@ -107,7 +107,7 @@ export default function ComNavBar() {
                                 </>}
 
                             </> : <>
-                                {heading.map((item, index) => {
+                                {heading?.map((item, index) => {
                                     return (
                                         <Link to={toLink[index]} key={index} className="dropdown-item flex" type="button">
                                             <div className="co-user-icon">
