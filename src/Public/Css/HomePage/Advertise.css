@@ -88,7 +88,6 @@
 
 .Caro-Links-Btn {
     color: white;
-    border-radius: 15px;
     background-color: black;
 }
 
@@ -206,8 +205,8 @@
     }
 
     .Carousel-Caption {
-        top: 40%;
-        left: 2%;
+        left: 4%;
+        top: 37%;
     }
 
     .Add-Img-Size {
@@ -219,18 +218,18 @@
     }
 
     .Caro-Heading {
-        font-size: 17px;
+        font-size: 14px;
     }
 
     .Caro-SubHeading {
-        font-size: 12px;
-        margin: 10px 0px;
+        font-size: 9px;
+        margin: 6px 0;
     }
 
     .Caro-Links-Btn {
         font-size: 9px;
-        padding: 5px 8px;
         margin: 5px;
+        padding: 5px;
     }
 
     .Watch-Head {

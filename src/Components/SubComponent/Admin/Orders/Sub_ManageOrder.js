@@ -22,14 +22,14 @@ export default function Sub_ManageOrder() {
         <div className='Orders appfont'>
             <div className="Filter-Orders">
                 <div className='Order-Info-Label'>Filter</div>
-                <select className='Filter-Select' value={FilterFields.status}
+                <select className='Filter-Select' value={FilterFields?.status}
                     onChange={async (event) => {
                         const selectedValue = event.target.value;
                         if (selectedValue === "Reset") setFilterFields({ ...FilterFields, status: "" });
                         else setFilterFields({ ...FilterFields, status: selectedValue });
                     }} name="status" id="status" >
                     <option value="Reset">Status</option>
-                    {Status.map((st, index) => {
+                    {Status?.map((st, index) => {
                         return <option className='Order-Info-result' key={index + "df"} value={st}>{st}</option>
                     })}
                 </select>
@@ -40,8 +40,8 @@ export default function Sub_ManageOrder() {
                         else setFilterFields({ ...FilterFields, category: selectedValue });
                     }}>
                     <option value="Reset">Category</option>
-                    {AllCategories.map((item) => {
-                        return <option className='Order-Info-result' key={item._id} value={item.name}>{item.name}</option>
+                    {AllCategories?.map((item) => {
+                        return <option className='Order-Info-result' key={item?._id} value={item?.name}>{item?.name}</option>
                     })}
                 </select>
             </div>
@@ -75,7 +75,7 @@ export default function Sub_ManageOrder() {
                                     return (
                                         <div key={pro?._id} className="EachProduct">
                                             <div className="Order-Image">
-                                                <img className="Order-Img-Size" src={`${BASE_URL}/api/v1/product/product-photo/${pro?.product._id}`} />
+                                                <img className="Order-Img-Size" src={`${BASE_URL}/api/v1/product/product-photo/${pro?.product?._id}`} />
                                             </div>
                                             <div className="Order-Details">
                                                 <li className="Orders-Info">

@@ -39,10 +39,10 @@ export default function UsersHomePage() {
                         </ol>
                         <div className="carousel-inner">
                             <div className="carousel-item active">
-                                <img className="d-block w-100" src={Caro1} alt="Second slide" />
+                                <img className="d-block w-100" src={Caro2} alt="Second slide" />
                                 <div className="Carousel-Caption">
-                                    <h2 className='Caro-Heading'>Branded Watches</h2>
-                                    <p className='Caro-SubHeading' >Start your everyday wellness journey</p>
+                                    <h2 className='Caro-Heading'>Galaxy Z Fold5</h2>
+                                    <p className='Caro-SubHeading' >PC-like power in your pocket </p>
                                     <Link to={`/category/647a162d6648621f023de865`} className='Caro-Links'>
                                         <h5 className='Caro-Links-Btn'>Shop Now</h5>
                                         <h5 className='Caro-Links-Btn'>Learn More</h5>
@@ -50,10 +50,10 @@ export default function UsersHomePage() {
                                 </div>
                             </div>
                             <div className="carousel-item">
-                                <img className="d-block w-100" src={Caro2} alt="Third slide" />
+                                <img className="d-block w-100" src={Caro1} alt="Third slide" />
                                 <div className="Carousel-Caption">
-                                    <h2 className='Caro-Heading'>Galaxy Z Fold5</h2>
-                                    <p className='Caro-SubHeading' >PC-like power in your pocket</p>
+                                    <h2 className='Caro-Heading'>Branded Watches </h2>
+                                    <p className='Caro-SubHeading' >Start your everyday wellness journey</p>
                                     <Link to={`/product/Samsung-Galaxy-Z-Fold`} className='Caro-Links'>
                                         <h5 className='Caro-Links-Btn'>Shop Now</h5>
                                     </Link>

@@ -45,8 +45,6 @@
     width: fit-content;
     background-color: black;
     color: white;
-    border: solid 1px #FF4500;
-    border-radius: 15px;
 }
 
 .OrderSelect {
@@ -76,7 +74,7 @@
 .SingleUserOrder {
     display: grid;
     border-radius: 10px;
-    border: solid 1px black;
+    border: solid 1px #c4c4c4;
     justify-content: center;
     align-items: start;
 }
@@ -84,7 +82,7 @@
 .SingleAdminOrder {
     display: grid;
     border-radius: 10px;
-    border: solid 1px black;
+    border: solid 1px #c4c4c4;
 }
 
 .Order-Products {
@@ -118,7 +116,7 @@
 }
 
 .CancelOrder {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,7 +203,12 @@
     }
 
     .Order-Image {
-        display: none;
+        height: 80px;
+    }
+
+    .Order-Img-Size {
+        height: 90%;
+        border-radius: 20px;
     }
 
     .Order-Info-Label {
@@ -253,8 +256,8 @@
     .EachProduct {
         width: 85%;
         grid-gap: 15px;
-        margin-left: 20px;
-        padding-left: 10px;
+        grid-template-columns: 2fr 5fr;
+
     }
 }
 
@@ -269,7 +272,14 @@
     }
 
     .Order-Image {
-        display: none;
+        /*display none*/
+        height: 80px;
+    }
+
+    .Order-Img-Size {
+        /* NA*/
+        height: 90%;
+        border-radius: 20px;
     }
 
     .Order-Info-Label {
@@ -316,7 +326,6 @@
 
     .EachProduct {
         grid-gap: 15px;
-        margin-left: 20px;
-        padding-left: 10px;
+        grid-template-columns: 2fr 5fr;
     }
 }

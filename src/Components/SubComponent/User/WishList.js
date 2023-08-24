@@ -5,6 +5,8 @@ import ViewContext from '../../../Context/ViewContext'
 import Layout from '../../Layout/Layout'
 import ProductContext from '../../../Context/Product'
 
+const BASE_URL = process.env.REACT_APP_BASE_URL
+
 export default function WishList() {
     const { View } = useContext(ViewContext);
     const { LikeProducts, DislikeProduct, AddProductToCart, ConvertToINR } = useContext(ProductContext);
@@ -43,7 +45,7 @@ export default function WishList() {
                                         return (
                                             <div key={index} className="Each-Product card">
                                                 <div className="product-img">
-                                                    <img className='product-img-size' src={`http://localhost:5002/api/v1/product/product-photo/${product?._id}`} alt={product?.name} />
+                                                    <img className='product-img-size' src={`${BASE_URL}/api/v1/product/product-photo/${product?._id}`} alt={product?.name} />
                                                     <div className="Like-Product">
                                                         <i onClick={() => { DislikeProduct(product) }} className="fa-solid fa-heart" style={{ color: "#f1092c" }} />
                                                     </div>

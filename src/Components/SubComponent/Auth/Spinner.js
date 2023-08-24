@@ -16,8 +16,8 @@ const Spinner = () => {
 
     return (
         <div className="d-flex flex-column justify-content-center text-center align-items-center appfont" style={{ height: "70vh" }}>
-            {/* <h1>Please Login To Page</h1>
-            <h3>Redirecting to Login Page</h3> */}
+
+
             <div className="spinner-border" role="status">
                 <span className="sr-only">Loading...</span>
             </div>
