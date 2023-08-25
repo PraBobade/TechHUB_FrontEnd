@@ -17,7 +17,7 @@
 
 .Menu {
     background-color: whitesmoke;
-    height: 100%;
+    height: fit-content;
 }
 
 .Mobile-Menu-btn {

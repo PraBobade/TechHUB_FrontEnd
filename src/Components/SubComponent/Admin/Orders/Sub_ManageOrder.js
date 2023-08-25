@@ -49,7 +49,7 @@ export default function Sub_ManageOrder() {
                 {AdminAllOrders.length === 0 ? 'No Pending Orders Found' : `${AdminAllOrders.length} Result Found`}
             </div>
             <div className="OrdersList">
-                {AdminAllOrders?.slice(0).reverse().map((order, index) => {
+                {AdminAllOrders?.slice(0)?.reverse()?.map((order, index) => {
                     return (
                         <div key={index} className="SingleAdminOrder">
                             <div className="OrderInfo">

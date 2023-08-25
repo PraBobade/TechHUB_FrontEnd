@@ -10,7 +10,7 @@ export default function RelatedProduct({ RelatedProducts, ConvertToINR, LikeProd
                 Similar Products
             </div>
             <div className='Product-List appfont'>
-                {RelatedProducts.map((product, index) => {
+                {RelatedProducts.slice(0).reverse().map((product, index) => {
                     return (
                         <div key={index} className="Each-Product card">
                             <div className="product-img">

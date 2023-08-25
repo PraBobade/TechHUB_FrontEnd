@@ -96,12 +96,14 @@ export function ProductState(props) {
             toast.error(Result?.data?.message);
         }
     }
-    async function GetRelatedProduct(CategoryId, ProductId) {
-        const RelatedProduct = await axios.get(`${BASE_URL}/api/v1/product/related-product/${CategoryId}/${ProductId}`);
-        if (RelatedProduct?.data?.status) {
-            return RelatedProduct?.data?.products
-        } else {
-            toast.error(RelatedProduct.data.message)
+    async function GetRelatedProduct(CategoryId, ProductId, Brand) {
+        if (CategoryId && ProductId, Brand) {
+            const RelatedProduct = await axios.get(`${BASE_URL}/api/v1/product/related-product/${CategoryId}/${ProductId}/${Brand}`);
+            if (RelatedProduct?.data?.status) {
+                return RelatedProduct?.data?.products
+            } else {
+                toast.error(RelatedProduct.data.message)
+            }
         }
     }
 

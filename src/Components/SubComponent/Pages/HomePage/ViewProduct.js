@@ -15,7 +15,7 @@ export default function ProductDetails() {
     async function GetProduct() {
         const Result = await GetProductDetails(params.slug);
         setProductDetail(Result);
-        const RelatedProduct = await GetRelatedProduct(Result.category._id, Result._id);
+        const RelatedProduct = await GetRelatedProduct(Result?.category?._id, Result?._id, Result.brand);
         setRelatedProducts(RelatedProduct);
     }
     useEffect(() => {
