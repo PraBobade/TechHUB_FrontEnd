@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import '../../../Public/Css/Layout/NavigationBar.css'
@@ -10,6 +10,7 @@ import LOGO from '../../../Public/Images/LOgo.png'
 
 
 export default function MobileNavBar() {
+    const ClearModal = useRef(null);
     const navigate = useNavigate();
     const { Auth, LogOut } = useContext(AuthContext);
     const { SearchProduct, CartProducts } = useContext(ProductContext);
@@ -30,6 +31,7 @@ export default function MobileNavBar() {
 
     async function handleSearch(event) {
         event.preventDefault();
+        ClearModal.current.click();
         const Result = await SearchProduct(SearchKeyword);
         if (Result) {
             navigate(`/search/${SearchKeyword}`);
@@ -54,7 +56,7 @@ export default function MobileNavBar() {
                     <button className='MobileIcons' data-toggle="modal" data-target=".bd-example-modal-sm">
                         <i className="Mo-Icons fa-solid fa-magnifying-glass" />
                     </button>
-                    <div className="modal fade bd-example-modal-sm" tabIndex={-1} role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div ref={ClearModal} className="modal fade bd-example-modal-sm" tabIndex={-1} role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                         <div style={{ display: "inline-block" }} className="modal-dialog modal-sm">
                             <div className="modal-content">
                                 <div className="mobile-search">

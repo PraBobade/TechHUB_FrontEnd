@@ -26,7 +26,7 @@ const ForgotPassword = () => {
 
     return (
         <>
-            <Layout title={"Login - Grocery Store"}>
+            <Layout title={"Forgot Password - TechHUB"}>
                 <div className='AuthPage VH-Center appfont'>
                     <div className="AuthBox">
                         <h4 className='Auth-heading'>Forgot Password</h4>
